@@ -1,48 +1,49 @@
+import './App.css';
 export const Day1 = () => {
     return <div className="day1">
 
         <div>
             <p>I have installed NVM by running the following command on the terminal
         </p>
-            <p>wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+            <p className="code">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
         </p>
             <p>When the installation was finished, I listed the files by entering the command below.
         </p>
-            <p>ls -al ~/
+            <p className="code">ls -al ~/
         </p>
             <p>I executed the bashrc file from the incoming list with the following command.
         </p>
-            <p>cat ~/.bashrc
+            <p className="code">cat ~/.bashrc
         </p>
             <p>I downloaded the NodeJs latest version by entering the command below.
         </p>
-            <p>nvm install v15.8.0
+            <p className="code">nvm install v15.8.0
         </p>
             <p>I entered the following commands to check
         </p>
-            <p>npm -v
+            <p className="code">npm -v
         </p>
-            <p>node-v
+            <p className="code">node-v
         </p>
             <p>To create a Goker Blog project file, it is necessary to enter the projects file. I created my file in the projects folder by entering the commands below.
         </p>
-            <p>cd projects
+            <p className="code">cd projects
         </p>
-            <p>npx create-react-app goker-blog
+            <p className="code">npx create-react-app goker-blog
         </p>
             <p>To install the default react app in the goker blog file, go to the following command
         </p>
-            <p>cd goker-blog
+            <p className="code">cd goker-blog
         </p>
-            <p> npm start
+            <p className="code"> npm start
         </p>
             <p> When the process is over, localhost: 3000 opens in the browser. The default react app works locally.
         </p>
             <p>Open a new terminal and enter the following commands.
         </p>
-            <p>cd projects
+            <p className="code">cd projects
         </p>
-            <p>code goker-blog
+            <p className="code">code goker-blog
         </p>
             <p>Thes, the app I created in VS opens.
         </p>
