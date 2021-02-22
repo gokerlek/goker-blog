@@ -1,9 +1,10 @@
 import './App.css';
+import './code.css';
 export const Day1 = () => {
     return <div className="day1">
 
         <div>
-            <p>I have installed NVM by running the following command on the terminal
+            <p> Code I have installed NVM by running the following command on the terminal
         </p>
             <p className="code">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
         </p>
