@@ -1,4 +1,5 @@
-import './App.css';
+import { Link } from 'react-router-dom';
+
 export const Day1 = () => {
     return <div className="day1">
 
@@ -56,5 +57,6 @@ export const Day1 = () => {
             <p>Now the changes I made in my project can be viewed online.
         </p>
         </div>
+        <Link to="/day2">Click to see Day 2</Link>
     </div>;
 }
