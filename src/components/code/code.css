@@ -7,18 +7,4 @@
   border-radius: 5px;
   margin: 2px 5px;
   padding: 10px 5px;
-
-}
-.layout {
-  max-width:720px;
-  margin: 0 auto;
-
-}
-
-p {
-  padding-left: 0.7em;
-}
-
-#root {
-  background-color: whitesmoke;
 }
