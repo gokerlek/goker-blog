@@ -11,6 +11,8 @@ import { ProjectsPage } from './pages/projects';
 import { ContactPage } from './pages/contact';
 import { HomePage } from './pages/home';
 import { Day2 } from './pages/day2';
+import { Day3 } from './pages/day3';
+
 
 const App = () => {
   return (
@@ -27,6 +29,9 @@ const App = () => {
             </Route>
             <Route path="/day2">
               <Day2 />
+            </Route>
+            <Route path="/day3">
+              <Day3 />
             </Route>
             <Route path="/" exact>
               <HomePage />
