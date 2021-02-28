@@ -6,13 +6,13 @@ export const Day3 = () => {
             We write the following command to the terminal so that we can use React router
             </p>
         <Code>
-            <p>{`npm install react-router-dom @ next`}</p>
+            npm install react-router-dom @ next
         </Code>
         <p>
             After the installation is finished, we start our project.
             </p>
         <Code>
-            <p>{`npm run start`}</p>
+            npm run start
         </Code>
         <p>
             We import the react router into the app.js file.
