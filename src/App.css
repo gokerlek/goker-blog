@@ -5,4 +5,4 @@ p {
 #root {
   background-color: whitesmoke;
 }
-  
+* {box-sizing: border-box;}
