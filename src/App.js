@@ -12,12 +12,13 @@ import { ContactPage } from './pages/contact';
 import { HomePage } from './pages/home';
 import { Day2 } from './pages/day2';
 import { Day3 } from './pages/day3';
+import { Layout } from './components/layout/layout';
 
 
 const App = () => {
   return (
     <Router>
-      <div className="layout">
+      <Layout>
         <Header />
         <Container>
           <Switch>
@@ -39,7 +40,7 @@ const App = () => {
           </Switch>
         </Container>
         <Footer />
-      </div>
+      </Layout>
     </Router>
   );
 }
