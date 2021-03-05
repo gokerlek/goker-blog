@@ -19,7 +19,6 @@ const App = () => {
   return (
     <Router>
       <Layout>
-        <Header />
         <Container>
           <Switch>
             <Route path="/projects">
@@ -39,7 +38,6 @@ const App = () => {
             </Route>
           </Switch>
         </Container>
-        <Footer />
       </Layout>
     </Router>
   );
