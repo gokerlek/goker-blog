@@ -1,7 +1,5 @@
 import './App.css';
-import { Header } from './components/header.js';
-import { Container } from './components/container.js';
-import { Footer } from './components/footer.js';
+import { Container } from './components/container/container';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,13 +10,13 @@ import { ContactPage } from './pages/contact';
 import { HomePage } from './pages/home';
 import { Day2 } from './pages/day2';
 import { Day3 } from './pages/day3';
+import { Layout } from './components/layout/layout';
 
 
 const App = () => {
   return (
     <Router>
-      <div className="layout">
-        <Header />
+      <Layout>
         <Container>
           <Switch>
             <Route path="/projects">
@@ -38,8 +36,7 @@ const App = () => {
             </Route>
           </Switch>
         </Container>
-        <Footer />
-      </div>
+      </Layout>
     </Router>
   );
 }
