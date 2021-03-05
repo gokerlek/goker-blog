@@ -1,7 +1,5 @@
 import './App.css';
-import { Header } from './components/header.js';
-import { Container } from './components/container.js';
-import { Footer } from './components/footer.js';
+import { Container } from './components/container/container';
 import {
   BrowserRouter as Router,
   Switch,
