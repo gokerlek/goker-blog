@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-
+import { Container } from '../components/container/container'
 export const Footer = () => {
     return <div className="footer">
-        <Link to="/"> Home</Link>
-        <Link to="/projects"> Projects</Link>
-        <Link to="/contact"> Contact</Link>
+        <Container>
+            <Link to="/"> Home</Link>
+            <Link to="/projects"> Projects</Link>
+            <Link to="/contact"> Contact</Link>
+        </Container>
     </div>
 }
