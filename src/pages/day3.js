@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Code } from '../components/code/code'
-import { PageHeader } from '../components/pageHeader/pageHeader'
+import { PageHeader } from '../components/page-header/page-header'
 
 export const Day3 = () => {
     return <div className="day3">

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Code } from '../components/code/code'
-import { PageHeader } from '../components/pageHeader/pageHeader'
+import { PageHeader } from '../components/page-header/page-header'
 export const Day1 = () => {
     return <div className="day1">
-        <PageHeader>LOGIN TO REACT</PageHeader>
+        <PageHeader>React: Very First Steps</PageHeader>
         <p>I have installed NVM by running the following command on the terminal
         </p>
         <Code>wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
