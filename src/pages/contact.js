@@ -1,4 +1,4 @@
-import { ImageWrapper } from '../components/image-wrapper/image-wrapper';
+import { IconWithLink } from '../components/icon-component/icon-component';
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -13,17 +13,11 @@ export const ContactPage = () => {
         <p>+90 542 323 92 48</p>
         <p>gokerlek@gmail.com </p>
         <p>Urla-IZMIR-TURKEY</p>
-        <ImageWrapper>
-            <a href="https://www.instagram.com/gokerlek/"> <FaInstagram className="social" /> </a>
-        </ImageWrapper>
-        <ImageWrapper>
-            <a href="https://github.com/gokerlek"> <FaGithub className="social" /> </a>
-        </ImageWrapper>
-        <ImageWrapper>
-            <a href="https://twitter.com/gokerzfr"> <FaTwitter className="social" /> </a>
-        </ImageWrapper>
-        <ImageWrapper>
-            <a href="https://www.linkedin.com/in/gokerzafer/"> <FaLinkedinIn className="social" /> </a>
-        </ImageWrapper>
+
+        <IconWithLink link="https://www.linkedin.com/in/gokerzafer/" icon={FaLinkedinIn} />
+        <IconWithLink link="https://www.instagram.com/gokerlek" icon={FaInstagram} />
+        <IconWithLink link="https://github.com/gokerlek" icon={FaGithub} />
+        <IconWithLink link="https://twitter.com/gokerzfr" icon={FaTwitter} />
+
     </div>
 }
