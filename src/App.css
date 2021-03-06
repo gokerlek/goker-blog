@@ -1,7 +1,9 @@
 p {
   padding-left: 0.7em;
 }
-
 #root {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
+}
+h1,h2,h3 {
+  color:#292929;
 }
