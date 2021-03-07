@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
 import { Code } from '../components/code/code'
-
+import { PageHeader } from '../components/page-header/page-header'
 export const Day2 = () => {
     return <div className="day2">
+        <PageHeader>CREATING THE BASIC BUILDING STONES OF A REACT WEBSITE</PageHeader>
         <p>
             We are starting to shape the project with React.
             First, I examined the files that came with the React installation.

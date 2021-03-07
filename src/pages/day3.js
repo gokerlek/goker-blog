@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Code } from '../components/code/code'
+import { PageHeader } from '../components/page-header/page-header'
+
 export const Day3 = () => {
     return <div className="day3">
+        <PageHeader>INTRODUCTION TO REACT ROUTER</PageHeader>
         <p>
             We write the following command to the terminal so that we can use React router
             </p>
