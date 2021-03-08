@@ -8,6 +8,7 @@ export const ProjectsPage = () => {
         <PageHeader> My projects </PageHeader>
         {datas.map(data => (
             <ProjectContent
+                key={data.id}
                 title={data.title}
                 usedTechnology={data.usedTechnology}
                 summery={data.summery}
