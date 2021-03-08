@@ -1,4 +1,4 @@
-export const ProjectsDatas = [
+export const projectsDatas = [
     {
         title: "Göker Blog",
         usedTechnology: "React, Css, HTML",
@@ -17,4 +17,4 @@ export const ProjectsDatas = [
         summery: "summurryfvfv summurryfvfv summurryfvfv summurryfvfv summurryfvfv",
         projectlink: "/day3",
     },
-]
+];
