@@ -15,6 +15,7 @@ export const Footer = () => {
             <IconWithLink link="https://www.instagram.com/gokerlek" icon={FaInstagram} />
             <IconWithLink link="https://github.com/gokerlek" icon={FaGithub} />
             <IconWithLink link="https://twitter.com/gokerzfr" icon={FaTwitter} />
+            <h5>© 2021 - 2021 www.gokerzafer.com - All Rights Reserved.</h5>
         </Container>
     </div>
 }
