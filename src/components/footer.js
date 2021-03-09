@@ -3,9 +3,7 @@ import { Container } from '../components/container/container'
 export const Footer = () => {
     return <div className="footer">
         <Container>
-            <Link to="/"> Home</Link>
-            <Link to="/projects"> Projects</Link>
-            <Link to="/contact"> Contact</Link>
+            <h5>© 2021 - 2021 www.gokerzafer.com - All Rights Reserved.</h5>
         </Container>
     </div>
 }
