@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 export const ProjectContent = ({ title, usedTechnology, summery, projectlink }) => {
-    return <div className="project-content">
-        <h3>{title}</h3>
-        <h6>{usedTechnology}</h6>
-        <p>{summery}</p>
-        <Link to={projectlink}>Click for more</Link>
-        <style>{`
+  return (
+    <div className="project-content">
+      <h3>{title}</h3>
+      <h6>{usedTechnology}</h6>
+      <p>{summery}</p>
+      <Link to={projectlink}>Click for more</Link>
+      <style>{`
             .project-content{
                 display:flex;
                 flex-direction: column;
@@ -30,4 +31,5 @@ export const ProjectContent = ({ title, usedTechnology, summery, projectlink }) 
             }
         `}</style>
     </div>
-}
+  );
+};
