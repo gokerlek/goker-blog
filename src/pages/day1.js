@@ -38,7 +38,6 @@ export const Day1 = () => {
       <Code>cd goker-blog</Code>
       <Code>npm start</Code>
       <p>
-        {' '}
         When the process is over, localhost: 3000 opens in the browser. The default
         react app works locally.
       </p>
