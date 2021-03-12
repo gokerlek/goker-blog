@@ -12,19 +12,19 @@ export const Day2 = () => {
         in App.js
       </p>
       <Code>
-        <p>{`import './App.css';`}</p>
-        <p>{`const App = () => {`}</p>
-        <p>{`return (`}</p>
-        <p>{`<div className = "layout">`}</p>
-        <p>{`<Header />`}</p>
-        <p>{`<Container>`}</p>
-        <p>{`<Day1 />`}</p>
-        <p>{`</Container>`}</p>
-        <p>{`<Footer />`}</p>
-        <p>{`</div>`}</p>
-        <p>{`);`}</p>
-        <p>{`}`}</p>
-        <p>{`export default App;`}</p>
+        {`import './App.css';
+const App = () => {
+  return (
+    <div className = "layout">
+      <Header />
+      <Container>
+        <Day1 />
+      </Container>
+      <Footer />
+    </div>
+  );
+}
+export default App;`}
       </Code>
       <p>
         Although the view is similar to the HTML language, it is the js language
@@ -38,29 +38,31 @@ export const Day2 = () => {
         than others. Below we see the structures.
       </p>
       <Code>
-        <p>{`export const Footer = () => {`}</p>
-        <p>{`return <div className = "footer">`}</p>
-        <p>{`<a href="home"> Home </a>`}</p>
-        <p>{`<a href="projets"> Projects </a>`}</p>
-        <p>{`<a href="contact"> Contact </a>`}</p>
-        <p>{`</div>;`}</p>
-        <p>{`}`}</p>
+        {`export const Footer = () => {
+return 
+  <div className = "footer">
+    <a href="home"> Home </a>
+    <a href="projets"> Projects </a>
+    <a href="contact"> Contact </a>
+  </div>;
+}`}
       </Code>
       <Code>
-        <p>{`export const Header = () => {`}</p>
-        <p>{`return <div className = "header">`}</p>
-        <p>{`<a href="home"> Home </a>`}</p>
-        <p>{`<a href="projects"> Projects </a>`}</p>
-        <p>{`<a href="contact"> Contact </a>`}</p>
-        <p>{`</div>`}</p>
-        <p>{`}`}</p>
+        {`export const Header = () => {
+return 
+  <div className = "header">
+    <a href="home"> Home </a>
+    <a href="projects"> Projects </a>
+    <a href="contact"> Contact </a>
+  </div>
+}`}
       </Code>
       <Code>
-        <p>{`export const Container = ({children}) => {`}</p>
-        <p>{`return <div className = "container">`}</p>
-        <p>{`{children}`}</p>
-        <p>{`</div>`}</p>
-        <p>{`}`}</p>
+        {`export const Container = ({children}) => {
+return <div className = "container">
+{children}
+</div>
+}`}
       </Code>
       <p>
         The structure of "children" has been added to the container function. In this
@@ -69,22 +71,22 @@ export const Day2 = () => {
         App.js.
       </p>
       <Code>
-        <p>{`import './App.css';`}</p>
-        <p>{`import {Header} from '.header';`}</p>
-        <p>{`import {Container} from '.container';`}</p>
-        <p>{`import {Footer} from './footer';`}</p>
-        <p>{`const App = () => {`}</p>
-        <p>{`return (`}</p>
-        <p>{`<div className = "layout">`}</p>
-        <p>{`<Header />`}</p>
-        <p>{`<Container>`}</p>
-        <p>{`<Day1 />`}</p>
-        <p>{`</Container>`}</p>
-        <p>{`<Footer />`}</p>
-        <p>{`</div>`}</p>
-        <p>{`);`}</p>
-        <p>{`}`}</p>
-        <p>{`export default App;`}</p>
+        {`import './App.css';
+import {Header} from '.header';
+import {Container} from '.container';
+import {Footer} from './footer';
+const App = () => {
+  return (
+    <div className = "layout">
+      <Header />
+      <Container>
+        <Day1 />
+      </Container>
+      <Footer />
+    </div>
+  );
+}
+export default App;`}
       </Code>
       <p>
         We create js files for home, projects, contact pages in Header and Footer.
@@ -95,12 +97,12 @@ export const Day2 = () => {
       </p>
       <p>We import the day1.js file so that Day1 appears in our home page.</p>
       <Code>
-        <p>{`import {Day1} from "./day1"`}</p>
-        <p>{`export const HomePage = () => {`}</p>
-        <p>{`return <div>`}</p>
-        <p>{`<Day1 />`}</p>
-        <p>{`</div>`}</p>
-        <p>{`}`}</p>
+        {`import {Day1} from "./day1"
+export const HomePage = () => {
+return <div>
+<Day1 />
+</div>
+}`}
       </Code>
       <p>
         We import the js files of the pages we want in App.js into App.js. We are now

@@ -15,43 +15,43 @@ export const Day3 = () => {
       <Code>npm run start</Code>
       <p>We import the react router into the app.js file.</p>
       <Code>
-        <p>{`import {`}</p>
-        <p>{`BrowserRouter as Router,`}</p>
-        <p>{`Switch,`}</p>
-        <p>{`Route,`}</p>
-        <p>{`} from "react-router-dom";`}</p>
+        {`import {
+BrowserRouter as Router,
+Switch,
+Route,
+from "react-router-dom";`}
       </Code>
       <p>Now we can start setting up our router structure.</p>
       <p>We are writing the router to cover everything contained in return ().</p>
       <Code>
-        <p>{`import './App.css';`}</p>
-        <p>{`import {Header} from './components/header';`}</p>
-        <p>{`import {Container} from './components/container';`}</p>
-        <p>{`import {Footer} from './components/footer';`}</p>
-        <p>{`import {`}</p>
-        <p>{`BrowserRouter as Router,`}</p>
-        <p>{`Switch,`}</p>
-        <p>{`Route,`}</p>
-        <p>{`} from "react-router-dom";`}</p>
-        <p>{`import {ProjectsPage} from './pages/projects';`}</p>
-        <p>{`import {ContactPage} from './pages/contact';`}</p>
-        <p>{`import {HomePage} from './pages/home';`}</p>
-        <p>{`const App = () => {`}</p>
-        <p>{`return (`}</p>
-        <p>{`<Router>`}</p>
-        <p>{`<div className = "layout">`}</p>
-        <p>{`<Header />`}</p>
-        <p>{`<Container>`}</p>
-        <p>{`<ProjectsPage />`}</p>
-        <p>{`<ContactPage />`}</p>
-        <p>{`<HomePage />`}</p>
-        <p>{`</Container>`}</p>
-        <p>{`<Footer />`}</p>
-        <p>{`</div>`}</p>
-        <p>{`</Router>`}</p>
-        <p>{`);`}</p>
-        <p>{`}`}</p>
-        <p>{`export default App;`}</p>
+        {`import './App.css';
+import {Header} from './components/header';
+import {Container} from './components/container';
+import {Footer} from './components/footer';
+import {
+        BrowserRouter as Router,
+        Switch,
+        Route,
+      } from "react-router-dom";
+import {ProjectsPage} from './pages/projects';
+import {ContactPage} from './pages/contact';
+import {HomePage} from './pages/home';
+const App = () => {
+  return (
+    <Router>
+      <div className = "layout">
+        <Header />
+        <Container>
+          <ProjectsPage />
+        <ContactPage />
+        <HomePage />
+        </Container>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+export default App;`}
       </Code>
       <p>
         Then we set up our "swicth" and "route" structure into the container. In this
@@ -59,35 +59,34 @@ export const Day3 = () => {
         between pages.
       </p>
       <Code>
-        <p>{`const App = () => {`}</p>
-        <p>{`return (`}</p>
-        <p>{`<Router>`}</p>
-        <p>{`<div className = "layout">`}</p>
-        <p>{`<Header />`}</p>
-        <p>{`<Container>`}</p>
-        <p>{`<Switch>`}</p>
-        <p>{`<Route path = "/ projects">`}</p>
-        <p>{`<ProjectsPage />`}</p>
-        <p>{`</Route>`}</p>
-        <p>{`<Route path = "/ contact">`}</p>
-        <p>{`<ContactPage />`}</p>
-        <p>{`</Route>`}</p>
-        <p>{`<Route path = "/ day2">`}</p>
-        <p>{`<Day2 />`}</p>
-        <p>{`</Route>`}</p>
-        <p>{`<Route path = "/ day3">`}</p>
-        <p>{`<Day3 />`}</p>
-        <p>{`</Route>`}</p>
-        <p>{`<Route path = "/" exact>`}</p>
-        <p>{`<HomePage />`}</p>
-        <p>{`</Route>`}</p>
-        <p>{`</Switch>`}</p>
-        <p>{`</Container>`}</p>
-        <p>{`<Footer />`}</p>
-        <p>{`</div>`}</p>
-        <p>{`</Router>`}</p>
-        <p>{`);`}</p>
-        <p>{`}`}</p>
+        {`const App = () => {
+return (
+  <Router>
+  <div className = "layout">
+    <Header />
+    <Container>
+      <Switch>
+        <Route path = "/ projects">
+          <ProjectsPage />
+        </Route>
+        <Route path = "/ contact">
+          <ContactPage />
+        </Route>
+        <Route path = "/ day2">
+          <Day2 />
+        </Route>
+        <Route path = "/ day3">
+          <Day3 />
+        </Route>
+        <Route path = "/" exact>
+          <HomePage />
+        </Route>
+      </Switch>
+    </Container>
+    <Footer />
+  </div>
+  </Router>
+);`}
       </Code>
       <p>
         We also included the Day1 and Day2 pages, as seen in the code block. The Day1
@@ -96,23 +95,25 @@ export const Day3 = () => {
         version of the home.js and day1.js files.
       </p>
       <Code>
-        <p>{`import {Day1} from "./day1"`}</p>
-        <p>{`export const HomePage = () => {`}</p>
-        <p>{`return <div>`}</p>
-        <p>{`<Day1 />`}</p>
-        <p>{`</div>`}</p>
-        <p>{`}`}</p>
-        <p>{`import {Link} from 'react-router-dom';`}</p>
-        <p>{`import {Code} from '../components/code/code'`}</p>
-        <p>{`export const Day1 = () => {`}</p>
-        <p>{`return <div className = "day1">`}</p>
-        <p>{`p> content`}</p>
-        <p>{`</p>`}</p>
-        <p>{`<Code> some codes`}</p>
-        <p>{`</Code>`}</p>
-        <p>{`<Link to = "/ day2"> Click to see Day 2 </Link>`}</p>
-        <p>{`</div>;`}</p>
-        <p>{`}`}</p>
+        {`import {Day1} from "./day1"
+export const HomePage = () => {
+  return <div>
+    <Day1 />
+    </div>
+      }
+      import {Link} from 'react-router-dom';
+      import {Code} from '../components/code/code'
+      export const Day1 = () => {
+        return <div className = "day1">
+          <p> 
+            content
+          </p>
+          <Code> 
+            some codes
+          </Code>
+      <Link to = "/ day2"> Click to see Day 2 </Link>
+    </div>;
+}`}
       </Code>
       <p>
         We see the Code in the Day1 file. We made a js file with Children structure
@@ -123,14 +124,15 @@ export const Day3 = () => {
         structure. Below is the final version of header.js.
       </p>
       <Code>
-        <p>{`import {Link} from "react-router-dom";`}</p>
-        <p>{`export const Header = () => {`}</p>
-        <p>{`return <div className = "header">`}</p>
-        <p>{`<Link to = "/"> Home </Link>`}</p>
-        <p>{`<Link to = "/ projects"> Projects </Link>`}</p>
-        <p>{`<Link to = "/ contact"> Contact </Link>`}</p>
-        <p>{`</div>`}</p>
-        <p>{`}`}</p>
+        {`import {Link} from "react-router-dom";
+export const Header = () => {
+  return 
+    <div className = "header">
+      <Link to = "/"> Home </Link>
+      <Link to = "/ projects"> Projects </Link>
+      <Link to = "/ contact"> Contact </Link>
+    </div>
+}`}
       </Code>
       <p>Now, our site has become faster to switch between pages.</p>
     </div>
