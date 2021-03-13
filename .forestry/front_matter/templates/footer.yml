@@ -1,4 +1,19 @@
 ---
 label: Footer
 hide_body: true
-fields: []
+fields:
+- name: shortBio
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Short Bio
+- name: copyright
+  type: text
+  config:
+    required: true
+  label: Copyright
+  default: "© 2021 - 2021 www.gokerzafer.com - All Rights Reserved."
