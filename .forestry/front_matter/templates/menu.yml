@@ -1,4 +1,27 @@
 ---
 label: menu
 hide_body: true
-fields: []
+fields:
+- name: menuItem
+  type: field_group_list
+  fields:
+  - name: label
+    type: text
+    config:
+      required: true
+    label: Label
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+    default: "/"
+  - name: isInternal
+    type: boolean
+    label: Is Internal ?
+    default: true
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Menu Item
