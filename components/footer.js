@@ -7,7 +7,7 @@ import { Container } from './container';
 export const Footer = () => {
   return (
     <div className="footer">
-      <Container>
+      <Container width="960px" marg="0">
         <h3>Göker ZAFER</h3>
         <p>Hello,</p>
         <p>I am a passionate frontend developer!</p>
@@ -22,6 +22,29 @@ export const Footer = () => {
         <IconWithLink link="https://twitter.com/gokerzfr" icon={FaTwitter} />
         <h5>© 2021 - 2021 www.gokerzafer.com - All Rights Reserved.</h5>
       </Container>
+      <style jsx>
+        {`
+          .footer {
+            background-color: #d1d8e0;
+            padding-top: 5em;
+          }
+          ,
+          p {
+            margin: 0;
+            font-weight: 300;
+          }
+          h3 {
+            font-weight: 800;
+            margin-bottom: 1em;
+          }
+          h5 {
+            font-weight: 300;
+            color: #a5b1c2;
+            text-align: center;
+            margin-top: 3.8em;
+          }
+        `}
+      </style>
     </div>
   );
 };

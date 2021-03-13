@@ -15,7 +15,6 @@ export const Layout = ({ children, title = 'Goker Blog' }) => {
         <Footer />
         <style jsx global>{`
           p {
-            padding-left: 0.7em;
             color: #292929;
           }
 
@@ -33,7 +32,7 @@ export const Layout = ({ children, title = 'Goker Blog' }) => {
           .layout {
             display: grid;
             grid-template-rows: 80px minmax(calc(100vh - 80px), max-content) minmax(
-                150px,
+                330px,
                 max-content
               );
           }
