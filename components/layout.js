@@ -32,7 +32,7 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
           .layout {
             display: grid;
             grid-template-rows: 80px minmax(calc(100vh - 80px), max-content) minmax(
-                150px,
+                330px,
                 max-content
               );
           }

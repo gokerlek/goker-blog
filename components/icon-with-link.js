@@ -5,10 +5,10 @@ export const IconWithLink = ({ icon, link, color = '#009fb7' }) => {
       <IconComponent />
       <style jsx>{`
         .icon-wrapper {
-          width: 1em;
-          height: 1em;
+          width: 1.5em;
+          height: 1.5em;
           overflow: hidden;
-          margin: 0.5em 1.5em 0.5em 0;
+          margin: 0.5em 1em 0.5em 0;
           display: inline-block;
           color: ${color};
         }

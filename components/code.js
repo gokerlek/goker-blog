@@ -5,7 +5,7 @@ export const Code = ({ children, language = 'javascript' }) => {
     <SyntaxHighlighter
       language={language}
       style={xonokai}
-      customStyle={{ borderRadius: '10px', backgroundColor: '#292929' }}>
+      customStyle={{ borderRadius: '8px', backgroundColor: '#292929' }}>
       {children}
     </SyntaxHighlighter>
   );
