@@ -17,3 +17,5 @@ fields:
     required: true
   label: Copyright
   default: "© 2021 - 2021 www.gokerzafer.com - All Rights Reserved."
+pages:
+- cms/footer.json
