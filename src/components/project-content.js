@@ -13,7 +13,7 @@ export const ProjectContent = ({ title, usedTechnology, summery, projectlink }) 
                 align-items: center;
                 justify-content: space-evenly;
                 margin: 1.5em auto;
-                padding: 1.5em 0;
+                padding: 1.5em 0.7em;
                 width: 50%;
                 border-radius: 1em;
                 background-color: #f5f5f5;

@@ -1,7 +1,7 @@
 import { Container } from './components/container';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ProjectsPage } from './pages/projects';
-import { ContactPage } from './pages/contact';
+import { AboutMe } from './pages/aboutMe';
 import { HomePage } from './pages/home';
 import { Day2 } from './pages/day2';
 import { Day3 } from './pages/day3';
@@ -17,8 +17,8 @@ const App = () => {
               <Route path="/projects">
                 <ProjectsPage />
               </Route>
-              <Route path="/contact">
-                <ContactPage />
+              <Route path="/aboutMe">
+                <AboutMe />
               </Route>
               <Route path="/day2">
                 <Day2 />
@@ -42,7 +42,6 @@ const App = () => {
           box-sizing: border-box;
         }
         p {
-          padding-left: 0.7em;
           color: #292929;
         }
         #root {
