@@ -1,5 +1,5 @@
 ---
-label: menu
+label: Menu
 hide_body: true
 fields:
 - name: menuItems
