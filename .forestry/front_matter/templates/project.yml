@@ -35,3 +35,5 @@ fields:
   type: image_gallery
   config: {}
   label: Galery
+pages:
+- cms/projects/goker-blog.json

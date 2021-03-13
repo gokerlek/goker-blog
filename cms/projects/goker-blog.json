@@ -1,0 +1,19 @@
+{
+  "technologies": [
+    "react",
+    "styled jsx",
+    "next.js",
+    "forestry.io",
+    "css"
+  ],
+  "thumbnail": "/images/goker-blog.png",
+  "title": "Göker Blog",
+  "summary": "This blog itself 🥳",
+  "projectLink": "/",
+  "galery": [
+
+  ]
+}
+This is a learning project and my aim is to improve my skills and creating content about my learnings so I can help others.
+
+Cheers 😉
