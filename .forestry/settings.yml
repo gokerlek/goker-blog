@@ -4,8 +4,38 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: cms/home.json
+  label: Home Page
+  match: "**/*"
+- type: directory
+  path: cms/pages
+  label: Pages
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".json"
+- type: directory
+  path: cms/blog
+  label: Blog
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".json"
+- type: directory
+  path: cms/projects
+  label: Projects
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".json"
 - type: heading
-  label: header
+  label: Settings
+- type: document
+  path: cms/menu.json
+  label: Menu
+  match: "**/*"
+- type: document
+  path: cms/footer.json
+  label: Footer
+  match: "**/*"
 upload_dir: public/images
 public_path: "/images"
 front_matter_path: ''
