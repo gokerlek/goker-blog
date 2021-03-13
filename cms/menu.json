@@ -1,5 +1,5 @@
 {
-  "menuItem": [
+  "menuItems": [
     {
       "label": "Home",
       "link": "/",
@@ -16,7 +16,7 @@
       "isInternal": true
     },
     {
-      "label": "About Me",
+      "label": "About me",
       "link": "/about-me",
       "isInternal": true
     }
