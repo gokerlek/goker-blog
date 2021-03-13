@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 export const ProjectContent = ({ title, usedTechnology, summery, projectlink }) => {
   return (
     <div className="project-content">
       <h3>{title}</h3>
       <h6>{usedTechnology}</h6>
       <p>{summery}</p>
-      <Link to={projectlink}>Click for more</Link>
+      <Link href={projectlink}>Click for more</Link>
       <style>{`
             .project-content{
                 display:flex;

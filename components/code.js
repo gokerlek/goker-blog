@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { xonokai } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { xonokai } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 export const Code = ({ children, language = 'javascript' }) => {
   return (
     <SyntaxHighlighter
