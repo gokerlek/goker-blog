@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Container } from '../components/container/container';
+import { Container } from '../components/container';
 export const Header = () => {
   return (
     <div className="header">

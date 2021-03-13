@@ -1,9 +1,9 @@
-import { IconWithLink } from './icon-component/icon-with-link';
+import { IconWithLink } from './icon-with-link';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
-import { Container } from './container/container';
+import { Container } from './container';
 export const Footer = () => {
   return (
     <div className="footer">

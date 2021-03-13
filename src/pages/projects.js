@@ -1,6 +1,6 @@
-import { PageHeader } from '../components/page-header/page-header';
+import { PageHeader } from '../components/page-header';
 import { useState } from 'react';
-import { ProjectContent } from '../components/project-content/project-content';
+import { ProjectContent } from '../components/project-content';
 import { projectsDatas } from '../components/projects-datas';
 export const ProjectsPage = () => {
   const [datas, setDatas] = useState(projectsDatas);

@@ -1,4 +1,4 @@
-import { IconWithLink } from '../components/icon-component/icon-with-link';
+import { IconWithLink } from '../components/icon-with-link';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';

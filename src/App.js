@@ -1,11 +1,11 @@
-import { Container } from './components/container/container';
+import { Container } from './components/container';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ProjectsPage } from './pages/projects';
 import { ContactPage } from './pages/contact';
 import { HomePage } from './pages/home';
 import { Day2 } from './pages/day2';
 import { Day3 } from './pages/day3';
-import { Layout } from './components/layout/layout';
+import { Layout } from './components/layout';
 
 const App = () => {
   return (
