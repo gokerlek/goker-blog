@@ -28,6 +28,10 @@ sections:
 - type: heading
   label: Settings
 - type: document
+  path: cms/menu.json
+  label: Menu
+  match: "**/*"
+- type: document
   path: cms/footer.json
   label: Footer
 upload_dir: public/images
