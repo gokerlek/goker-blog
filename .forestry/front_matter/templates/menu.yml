@@ -2,7 +2,7 @@
 label: menu
 hide_body: true
 fields:
-- name: menuItem
+- name: menuItems
   type: field_group_list
   fields:
   - name: label
@@ -24,6 +24,6 @@ fields:
     min: 
     max: 
     labelField: 
-  label: Menu Item
+  label: Menu Items
 pages:
 - cms/menu.json
