@@ -1,4 +1,19 @@
 ---
 label: Text Block
 hide_body: true
-fields: []
+display_field: content
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
