@@ -12,8 +12,8 @@ const Page = (props) => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const page = await getPage(slug);
-  return { props: { page } };
+  const props = await getPage(slug);
+  return { props };
 };
 
 export const getStaticPaths = async () => {
