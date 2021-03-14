@@ -22,6 +22,17 @@ fields:
   config:
     maxSize: 64
   label: Banner
+- name: summary
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+    max: 300
+    min: 100
+  label: Summary
 - name: blocks
   type: blocks
   label: Blocks
