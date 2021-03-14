@@ -7,6 +7,25 @@ fields:
   config:
     required: false
   label: Title
+- name: intro
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: detail
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Detail
+  label: Intro
 - name: latest_post
   type: field_group
   config: {}
