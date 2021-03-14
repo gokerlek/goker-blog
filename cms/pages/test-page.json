@@ -1,0 +1,11 @@
+{
+  "title": "Test Page",
+  "banner": "",
+  "blocks": [
+    {
+      "template": "text-block",
+      "title": "Sub Title",
+      "content": "test"
+    }
+  ]
+}
