@@ -1,13 +1,19 @@
 import Link from 'next/link';
 import { Container } from './container';
+import menu from '../cms/menu.json';
 
-export const Header = () => {
+export const Header = (props) => {
+  console.log(props);
+
   return (
     <div className="header">
       <Container>
-        <Link href="/">Home</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/about-me">About Me</Link>
+        <img src="" />
+        <div className="navbar">
+          {menu.menuItems.map((item) => (
+            <Link href={item.link}>{item.label}</Link>
+          ))}
+        </div>
       </Container>
     </div>
   );
