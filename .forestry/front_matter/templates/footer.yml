@@ -1,0 +1,46 @@
+---
+label: Footer
+hide_body: true
+fields:
+- name: shortBio
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Short Bio
+- name: copyright
+  type: text
+  config:
+    required: true
+  label: Copyright
+  default: "© 2021 - 2021 www.gokerzafer.com - All Rights Reserved."
+- name: socialLinks
+  type: field_group_list
+  fields:
+  - name: icon
+    type: text
+    config:
+      required: true
+    label: Icon
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+  - name: color
+    type: color
+    label: Color
+    config:
+      required: true
+      color_format: Hex
+    default: "#4A90E2"
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Social Links
+pages:
+- cms/footer.json

@@ -1,0 +1,26 @@
+{
+  "copyright": "© 2021 - 2021 www.gokerzafer.com - All Rights Reserved.",
+  "shortBio": "Hello,\n\nI am a passionate frontend developer!\n\nIf you have an amazing project and want to work with me\n\nplease dm me in one of the social media platforms.",
+  "socialLinks": [
+    {
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/in/gokerzafer/",
+      "color": "#4A90E2"
+    },
+    {
+      "icon": "instagram",
+      "link": "https://www.instagram.com/gokerlek",
+      "color": "#FFFFFF"
+    },
+    {
+      "icon": "github",
+      "link": "https://github.com/gokerlek",
+      "color": "#4A4A4A"
+    },
+    {
+      "icon": "twitter",
+      "link": "https://twitter.com/gokerzfr",
+      "color": "#4A90E2"
+    }
+  ]
+}

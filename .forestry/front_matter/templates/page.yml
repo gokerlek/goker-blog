@@ -1,0 +1,25 @@
+---
+label: Page
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: banner
+  type: file
+  config:
+    maxSize: 64
+  label: Banner
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - text-block
+  - image-block
+  config:
+    min: 
+    max: 
+pages:
+- cms/pages/test-page.json

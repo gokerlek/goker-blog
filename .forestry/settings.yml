@@ -1,0 +1,47 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: document
+  path: cms/home.json
+  label: Home Page
+- type: directory
+  path: cms/pages
+  label: Pages
+  create: documents
+  match: "**/*"
+  new_doc_ext: json
+- type: directory
+  path: cms/blog
+  label: Blog
+  create: documents
+  match: "**/*"
+  new_doc_ext: json
+- type: directory
+  path: cms/projects
+  label: Projects
+  create: documents
+  match: "**/*"
+  new_doc_ext: json
+- type: heading
+  label: Settings
+- type: document
+  path: cms/menu.json
+  label: Menu
+- type: document
+  path: cms/footer.json
+  label: Footer
+upload_dir: public/images
+public_path: "/images"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: out
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run dev

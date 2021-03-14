@@ -4,8 +4,10 @@ import { ProjectContent } from '../components/project-content';
 import { projectsDatas } from '../components/projects-datas';
 import { Layout } from '../components/layout';
 import { Container } from '../components/container';
+import { getProjects } from '../api/projects';
 
-const ProjectsPage = () => {
+const ProjectsPage = (props) => {
+  console.log(props);
   const [datas] = useState(projectsDatas);
 
   return (
@@ -26,6 +28,11 @@ const ProjectsPage = () => {
       </Container>
     </Layout>
   );
+};
+
+export const getStaticProps = async () => {
+  const props = await getProjects();
+  return { props };
 };
 
 export default ProjectsPage;
