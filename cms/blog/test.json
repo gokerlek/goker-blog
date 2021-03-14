@@ -19,5 +19,6 @@
       "title": "sample image title",
       "source": "source reference of the image"
     }
-  ]
+  ],
+  "summary": "Some sample test summary area to display in some places normally this will not be displayed in blog page itself"
 }
