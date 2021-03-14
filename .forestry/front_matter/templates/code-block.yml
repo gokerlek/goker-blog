@@ -1,4 +1,19 @@
 ---
 label: Code Block
 hide_body: true
-fields: []
+display_field: code
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: code
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Code
