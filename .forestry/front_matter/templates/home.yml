@@ -1,4 +1,50 @@
 ---
 label: Home
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: latest_post
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Description
+  - name: blog_post
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: blog
+        file: 
+        path: 
+    label: Blog Post
+  label: Latest Post
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - text-block
+  - image-block
+  - code-block
+  config:
+    min: 
+    max: 
