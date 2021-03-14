@@ -1,8 +1,10 @@
 import { Layout } from '../components/layout';
 import Link from 'next/link';
 import { Container } from '../components/container';
+import { getHome } from '../api/home';
 
-export default function Home() {
+const Home = (props) => {
+  console.log(props);
   return (
     <Layout>
       <Container>
@@ -10,4 +12,11 @@ export default function Home() {
       </Container>
     </Layout>
   );
-}
+};
+
+export const getStaticProps = async () => {
+  const props = await getHome();
+  return { props };
+};
+
+export default Home;
