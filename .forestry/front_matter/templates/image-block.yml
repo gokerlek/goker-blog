@@ -1,4 +1,19 @@
 ---
 label: Image Block
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+- name: source
+  type: text
+  config:
+    required: false
+  label: Source
