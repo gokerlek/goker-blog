@@ -16,5 +16,9 @@
       "content": "So far no luck...",
       "title": ""
     }
-  ]
+  ],
+  "intro": {
+    "title": "👋 My name is Göker",
+    "detail": "I’m learning React and sharing all the things that learned here! I’m living in Urla Izmir Turkey. I’m surely open for opportunities. If you are looking for someone as a frontend developer please drop me a message from one of my social media accounts. This pandemic has showed us only one thing nice which is future of work is remote. To learn more about me I have a section all about myself 😎 please check it from the header 👆"
+  }
 }
