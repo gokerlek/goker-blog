@@ -1,0 +1,12 @@
+{
+  "title": "Test",
+  "publish_date": "2021-03-13T23:00:00Z",
+  "banner": "/images/joshua-aragon-eab4ml7c7fe-unsplash-1.jpg",
+  "blocks": [
+    {
+      "template": "text-block",
+      "title": "Sub Title",
+      "content": "the content is here **some bold**"
+    }
+  ]
+}

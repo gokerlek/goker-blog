@@ -32,3 +32,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- cms/blog/test.json
