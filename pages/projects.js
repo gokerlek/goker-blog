@@ -6,12 +6,12 @@ import { Layout } from '../components/layout';
 import { Container } from '../components/container';
 import { getProjects } from '../api/projects';
 
-const ProjectsPage = (props) => {
+const ProjectsPage = (props, menu, footer) => {
   console.log(props);
   const [datas] = useState(projectsDatas);
 
   return (
-    <Layout title="Göker Blog - My projects">
+    <Layout title="Göker Blog - My projects" footer={footer} menu={menu.menuItems}>
       <Container>
         <div>
           <PageHeader> My projects </PageHeader>

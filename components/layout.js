@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Footer } from './footer';
 import { Header } from './header';
 
-export const Layout = ({ children, title = 'Goker Blog' }) => {
+export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
   return (
     <>
       <Head>
@@ -10,9 +10,9 @@ export const Layout = ({ children, title = 'Goker Blog' }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="layout">
-        <Header />
+        <Header menu={menu} />
         <div> {children} </div>
-        <Footer />
+        <Footer footer={footer} />
         <style jsx global>{`
           p {
             padding-left: 0.7em;

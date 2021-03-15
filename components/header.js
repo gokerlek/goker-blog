@@ -1,14 +1,10 @@
 import Link from 'next/link';
 import { Container } from './container';
 
-export const Header = () => {
+export const Header = ({ menu }) => {
   return (
     <div className="header">
-      <Container>
-        <Link href="/">Home</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/about-me">About Me</Link>
-      </Container>
+      <Container menu={menu}></Container>
     </div>
   );
 };
