@@ -4,7 +4,6 @@ import { Container } from '../components/container';
 import { getHome } from '../api/home';
 
 const Home = ({ page, menu, footer }) => {
-  console.log(page);
   return (
     <Layout footer={footer} menu={menu.menuItems}>
       <Container>

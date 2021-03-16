@@ -2,10 +2,9 @@ import { Layout } from '../../components/layout';
 import { Container } from '../../components/container';
 import { getPost, getSlugsOfPosts } from '../../api/blog';
 
-const BlogPost = (props) => {
-  console.log(props);
+const BlogPost = ({ page, menu, footer }) => {
   return (
-    <Layout>
+    <Layout menu={menu.menuItems} footer={footer}>
       <Container>Blog Post</Container>
     </Layout>
   );

@@ -7,7 +7,6 @@ import { Container } from '../components/container';
 import { getProjects } from '../api/projects';
 
 const ProjectsPage = ({ page, menu, footer }) => {
-  console.log(page);
   const [datas] = useState(projectsDatas);
 
   return (

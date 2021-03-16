@@ -2,10 +2,9 @@ import { Layout } from '../components/layout';
 import { Container } from '../components/container';
 import { getPage, getSlugsOfPages } from '../api/pages';
 
-const Page = (props) => {
-  console.log(props);
+const Page = ({ page, menu, footer }) => {
   return (
-    <Layout>
+    <Layout menu={menu.menuItems} footer={footer}>
       <Container>Page</Container>
     </Layout>
   );
@@ -16,7 +15,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   return { props };
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = () => {
   const pages = getSlugsOfPages();
 
   return {
