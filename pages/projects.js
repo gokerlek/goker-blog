@@ -6,8 +6,8 @@ import { Layout } from '../components/layout';
 import { Container } from '../components/container';
 import { getProjects } from '../api/projects';
 
-const ProjectsPage = ({ props, menu, footer }) => {
-  console.log(props);
+const ProjectsPage = ({ page, menu, footer }) => {
+  console.log(page);
   const [datas] = useState(projectsDatas);
 
   return (
