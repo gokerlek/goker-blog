@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { Container } from '../components/container';
 import { getHome } from '../api/home';
 
-const Home = (props) => {
-  console.log(props);
+const Home = ({ page, menu, footer }) => {
+  console.log(page);
   return (
-    <Layout>
+    <Layout footer={footer} menu={menu.menuItems}>
       <Container>
         <Link href="/day1">Latest post</Link>
       </Container>

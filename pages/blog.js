@@ -4,11 +4,11 @@ import { Layout } from '../components/layout';
 import { Container } from '../components/container';
 import { getPosts } from '../api/blog';
 
-const BlogPage = (props) => {
-  console.log(props);
+const BlogPage = ({ page, menu, footer }) => {
+  console.log(page);
 
   return (
-    <Layout title="Göker Blog">
+    <Layout title="Göker Blog" footer={footer} menu={menu.menuItems}>
       <Container>Blog</Container>
     </Layout>
   );

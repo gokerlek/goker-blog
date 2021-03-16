@@ -3,10 +3,14 @@ import { Code } from '../components/code';
 import { Container } from '../components/container';
 import { Layout } from '../components/layout';
 import { PageHeader } from '../components/page-header';
+import { getPages } from '../api/pages';
 
-const Day1 = () => {
+const Day1 = ({ menu, footer }) => {
   return (
-    <Layout title="Göker Blog - React: Very First Steps">
+    <Layout
+      title="Göker Blog - React: Very First Steps"
+      footer={footer}
+      menu={menu.menuItems}>
       <Container>
         <div className="day1">
           <PageHeader>React: Very First Steps</PageHeader>
@@ -63,6 +67,11 @@ const Day1 = () => {
       </Container>
     </Layout>
   );
+};
+
+export const getStaticProps = async () => {
+  const props = await getPages();
+  return { props };
 };
 
 export default Day1;
