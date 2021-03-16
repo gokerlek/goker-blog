@@ -4,10 +4,12 @@ import { FaGithub } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { Container } from './container';
-export const Footer = (footer) => {
+export const Footer = ({ footer }) => {
   return (
     <div className="footer">
-      <Container footer={footer}></Container>
+      <Container>
+        <h5>{footer.copyright}</h5>
+      </Container>
     </div>
   );
 };

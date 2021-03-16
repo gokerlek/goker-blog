@@ -2,10 +2,14 @@ import { Code } from '../components/code';
 import { Container } from '../components/container';
 import { Layout } from '../components/layout';
 import { PageHeader } from '../components/page-header';
+import { getPages } from '../api/pages';
 
-const Day3 = () => {
+const Day3 = ({ menu, footer }) => {
   return (
-    <Layout title="INTRODUCTION TO REACT ROUTER">
+    <Layout
+      title="INTRODUCTION TO REACT ROUTER"
+      footer={footer}
+      menu={menu.menuItems}>
       <Container>
         <div className="day3">
           <PageHeader>INTRODUCTION TO REACT ROUTER</PageHeader>
@@ -146,5 +150,8 @@ export const Header = () => {
     </Layout>
   );
 };
-
+export const getStaticProps = async () => {
+  const props = await getPages();
+  return { props };
+};
 export default Day3;
