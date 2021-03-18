@@ -4,6 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { Container } from './container';
+import ReactMarkdown from 'react-markdown';
 
 const getIcon = (icons) => {
   switch (icons) {
@@ -23,7 +24,7 @@ export const Footer = ({ footer }) => {
     <div className="footer">
       <Container width="960px" marg="0">
         <h3>Göker ZAFER</h3>
-        <p>{footer.shortBio}</p>
+        <ReactMarkdown>{footer.shortBio}</ReactMarkdown>
         {footer.socialLinks.map((socialLink) => (
           <IconWithLink
             key={socialLink.id}
@@ -41,7 +42,7 @@ export const Footer = ({ footer }) => {
             padding-top: 5em;
           }
           ,
-          p {
+          .footer :global(p) {
             margin: 0;
             font-weight: 300;
           }
