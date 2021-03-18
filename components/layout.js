@@ -15,7 +15,6 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
         <Footer footer={footer} />
         <style jsx global>{`
           p {
-            padding-left: 0.7em;
             color: #292929;
           }
 

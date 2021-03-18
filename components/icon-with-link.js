@@ -7,7 +7,7 @@ export const IconWithLink = ({ icon, link }) => {
           width: 1em;
           height: 1em;
           overflow: hidden;
-          margin: 0.5em 1em;
+          margin: 0.5em 1.5em 0.5em 0;
           display: inline-block;
           color: #009fb7;
         }
