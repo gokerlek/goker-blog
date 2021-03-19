@@ -3,10 +3,14 @@ import { Code } from '../components/code';
 import { Container } from '../components/container';
 import { Layout } from '../components/layout';
 import { PageHeader } from '../components/page-header';
+import { getPages } from '../api/pages';
 
-const Day2 = () => {
+const Day2 = ({ menu, footer }) => {
   return (
-    <Layout title="CREATING THE BASIC BUILDING STONES OF A REACT WEBSITE">
+    <Layout
+      title="CREATING THE BASIC BUILDING STONES OF A REACT WEBSITE"
+      footer={footer}
+      menu={menu.menuItems}>
       <Container>
         <div className="day2">
           <PageHeader>
@@ -122,5 +126,8 @@ export const HomePage = () => {
     </Layout>
   );
 };
-
+export const getStaticProps = async () => {
+  const props = await getPages();
+  return { props };
+};
 export default Day2;

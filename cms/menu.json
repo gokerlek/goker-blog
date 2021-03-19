@@ -1,0 +1,24 @@
+{
+  "menuItems": [
+    {
+      "label": "Home",
+      "link": "/",
+      "isInternal": true
+    },
+    {
+      "link": "/blog",
+      "isInternal": true,
+      "label": "Blog"
+    },
+    {
+      "label": "Projects",
+      "link": "/projects",
+      "isInternal": true
+    },
+    {
+      "label": "About me",
+      "link": "/about-me",
+      "isInternal": true
+    }
+  ]
+}

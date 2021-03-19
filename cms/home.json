@@ -1,0 +1,24 @@
+{
+  "latest_post": {
+    "blog_post": "cms/blog/test.json",
+    "title": "🎯 My Latest Post",
+    "description": "I’m not using medium or dev.to because maintaining this personal blog is also a part of my learning process. 🤞"
+  },
+  "title": "<>Hello World!</>",
+  "blocks": [
+    {
+      "template": "code-block",
+      "title": "💀 Challenge of the day",
+      "code": "// challenge will be here"
+    },
+    {
+      "template": "text-block",
+      "content": "So far no luck...",
+      "title": ""
+    }
+  ],
+  "intro": {
+    "title": "👋 My name is Göker",
+    "detail": "I’m learning React and sharing all the things that learned here! I’m living in Urla Izmir Turkey. I’m surely open for opportunities. If you are looking for someone as a frontend developer please drop me a message from one of my social media accounts. This pandemic has showed us only one thing nice which is future of work is remote. To learn more about me I have a section all about myself 😎 please check it from the header 👆"
+  }
+}

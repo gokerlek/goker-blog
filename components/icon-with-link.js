@@ -1,22 +1,21 @@
-export const IconWithLink = ({ icon, link }) => {
+export const IconWithLink = ({ icon, link, color = '#009fb7' }) => {
   const IconComponent = icon;
   return (
-    <a href={link} className="icon-wapper">
+    <a href={link} className="icon-wrapper">
+      <IconComponent />
       <style jsx>{`
-        .icon-wapper {
-          width: 1em;
-          height: 1em;
+        .icon-wrapper {
+          width: 1.5em;
+          height: 1.5em;
           overflow: hidden;
-          margin: 0.5em 1em;
+          margin: 0.5em 1em 0.5em 0;
           display: inline-block;
-          color: #009fb7;
+          color: ${color};
         }
-        .icon-wapper:hover {
+        .icon-wrapper:hover {
           color: #292929;
         }
       `}</style>
-
-      <IconComponent />
     </a>
   );
 };

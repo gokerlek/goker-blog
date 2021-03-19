@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Footer } from './footer';
 import { Header } from './header';
 
-export const Layout = ({ children, title = 'Goker Blog' }) => {
+export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
   return (
     <>
       <Head>
@@ -10,12 +10,11 @@ export const Layout = ({ children, title = 'Goker Blog' }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="layout">
-        <Header />
+        <Header menu={menu} />
         <div> {children} </div>
-        <Footer />
+        <Footer footer={footer} />
         <style jsx global>{`
           p {
-            padding-left: 0.7em;
             color: #292929;
           }
 
@@ -33,7 +32,7 @@ export const Layout = ({ children, title = 'Goker Blog' }) => {
           .layout {
             display: grid;
             grid-template-rows: 80px minmax(calc(100vh - 80px), max-content) minmax(
-                150px,
+                330px,
                 max-content
               );
           }

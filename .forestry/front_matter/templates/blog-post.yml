@@ -1,0 +1,47 @@
+---
+label: Blog Post
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: publish_date
+  type: datetime
+  label: Publish Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: banner
+  type: file
+  config:
+    maxSize: 64
+  label: Banner
+- name: summary
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+    max: 300
+    min: 100
+  label: Summary
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - text-block
+  - image-block
+  - code-block
+  config:
+    min: 
+    max: 
+pages:
+- cms/blog/test.json
