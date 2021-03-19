@@ -18,6 +18,11 @@
       "image": "/images/goker-blog.png",
       "title": "sample image title",
       "source": "source reference of the image"
+    },
+    {
+      "template": "code-block",
+      "code": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport App from \"./component/App\";",
+      "title": "sample code 2"
     }
   ],
   "summary": "Some sample test summary area to display in some places normally this will not be displayed in blog page itself"
