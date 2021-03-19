@@ -1,11 +1,37 @@
 import { Layout } from '../../components/layout';
 import { Container } from '../../components/container';
 import { getPost, getSlugsOfPosts } from '../../api/blog';
+import ReactMarkdown from 'react-markdown';
+import { Code } from '../../components/code';
 
 const BlogPost = ({ page, menu, footer }) => {
+  console.log(page.blocks[0].template);
   return (
     <Layout menu={menu.menuItems} footer={footer}>
-      <Container>Blog Post</Container>
+      <Container>
+        <div key={page.key}>
+          <img src={page.banner} />
+          <h1>{page.title}</h1>
+          <div>{page.publish_date}</div>
+          <div>
+            {page.blocks.map((block) => (
+              <div key={block.id}>
+                {block.template === 'code-block' ? (
+                  <Code key={block.id} title={block.title}>
+                    `{block.code}`
+                  </Code>
+                ) : block.template === 'text-block' ? (
+                  <ReactMarkdown key={block.id} title={block.title}>
+                    {block.content}
+                  </ReactMarkdown>
+                ) : block.template === 'image-block' ? (
+                  <img src={block.image} />
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
     </Layout>
   );
 };

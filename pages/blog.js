@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
 const BlogPage = ({ page, menu, footer }) => {
+  console.log(page);
   return (
     <Layout title="Göker Blog" footer={footer} menu={menu.menuItems}>
       <Container>
