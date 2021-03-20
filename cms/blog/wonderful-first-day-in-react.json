@@ -73,7 +73,7 @@
     {
       "template": "code-block",
       "language": "bash",
-      "code": "cd projects\n",
+      "code": "cd projects",
       "title": ""
     },
     {
