@@ -22,4 +22,5 @@ fields:
     min: 
     max: 
 pages:
+- cms/pages/about-me.json
 - cms/pages/test-page.json
