@@ -11,7 +11,8 @@
     {
       "template": "code-block",
       "title": "sample code",
-      "code": "\nimport React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport App from \"./component/App\";\nimport \"./index.css\";\nimport \"github-fork-ribbon-css/gh-fork-ribbon.css\";\n\nReactDOM.render(\n       <App />,\n       document.getElementById(\"root\")\n);"
+      "code": "\nimport React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport App from \"./component/App\";\nimport \"./index.css\";\nimport \"github-fork-ribbon-css/gh-fork-ribbon.css\";\n\nReactDOM.render(\n       <App />,\n       document.getElementById(\"root\")\n);",
+      "language": "javascript"
     },
     {
       "template": "image-block",
@@ -22,7 +23,8 @@
     {
       "template": "code-block",
       "code": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport App from \"./component/App\";",
-      "title": "sample code 2"
+      "title": "sample code 2",
+      "language": "javascript"
     }
   ],
   "summary": "Some sample test summary area to display in some places normally this will not be displayed in blog page itself"
