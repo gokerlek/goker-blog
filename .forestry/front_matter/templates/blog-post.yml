@@ -44,5 +44,4 @@ fields:
     min: 
     max: 
 pages:
-- cms/blog/test.json
 - cms/blog/wonderful-first-day-in-react.json
