@@ -9,7 +9,8 @@
     {
       "template": "code-block",
       "title": "💀 Challenge of the day",
-      "code": "// challenge will be here"
+      "code": "// challenge will be here",
+      "language": "javascript"
     },
     {
       "template": "text-block",
