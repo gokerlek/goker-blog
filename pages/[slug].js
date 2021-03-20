@@ -4,7 +4,6 @@ import { getPage, getSlugsOfPages } from '../api/pages';
 import ReactMarkdown from 'react-markdown';
 
 const Page = ({ page, menu, footer }) => {
-  console.log(page);
   return (
     <Layout menu={menu.menuItems} footer={footer}>
       <Container>
