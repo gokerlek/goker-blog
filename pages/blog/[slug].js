@@ -16,7 +16,7 @@ const BlogPost = ({ page, menu, footer }) => {
             {page.blocks.map((block) => (
               <div key={block.id}>
                 {block.title ? (
-                  <div className="block-title"> {block.title}</div>
+                  <div className="block-title">{block.title}</div>
                 ) : null}
                 {block.template === 'code-block' ? (
                   <Code language={block.language}>{block.code}</Code>
