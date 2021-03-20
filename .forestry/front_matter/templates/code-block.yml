@@ -8,6 +8,25 @@ fields:
   config:
     required: false
   label: Title
+- name: language
+  type: select
+  default: javascript
+  config:
+    required: true
+    options:
+    - html
+    - javascript
+    - css
+    - bash
+    - typescript
+    - scss
+    - less
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Language
 - name: code
   type: textarea
   default: ''
