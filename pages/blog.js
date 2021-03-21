@@ -5,12 +5,14 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
 const BlogPage = ({ page, menu, footer }) => {
-  console.log(page);
   return (
     <Layout title="Göker Blog" footer={footer} menu={menu.menuItems}>
       <Container>
         {page.list.map((post) => (
-          <Link key={post.id} as={post.path} href="/blog/[slug]">
+          <Link
+            key={post.id}
+            as={post.path.replace('blog/', 'posts/')}
+            href="/posts/[slug]">
             <div>
               {post.content.banner ? <img src={post.content.banner} /> : null}
               <div>{post.content.title}</div>

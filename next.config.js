@@ -38,8 +38,8 @@ module.exports = {
     });
     posts.forEach((post) => {
       const postName = post.replace('.json', '').split('/').pop();
-      pathMap[`/blog/${postName}`] = {
-        page: `/blog/[slug]`,
+      pathMap[`/posts/${postName}`] = {
+        page: `/posts/[slug]`,
         query: { slug: postName },
       };
     });

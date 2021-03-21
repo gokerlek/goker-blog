@@ -5,7 +5,6 @@ import { Container } from '../components/container';
 import { getProjects } from '../api/projects';
 
 const ProjectsPage = ({ page, menu, footer }) => {
-  console.log(page);
   return (
     <Layout title="Göker Blog - My projects" footer={footer} menu={menu.menuItems}>
       <Container>
