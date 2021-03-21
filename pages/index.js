@@ -6,16 +6,15 @@ import ReactMarkdown from 'react-markdown';
 import { Code } from '../components/code';
 
 const Home = ({ page, menu, footer }) => {
-  console.log(page);
   return (
     <Layout footer={footer} menu={menu.menuItems}>
       <Container>
         <h1>{page.title}</h1>
-        <div key={page.intro.id}>
+        <div>
           <h3>{page.intro.title}</h3>
           <ReactMarkdown>{page.intro.detail}</ReactMarkdown>
         </div>
-        <div key={page.latest_post.id}>
+        <div>
           <h3>{page.latest_post.title}</h3>
           <ReactMarkdown>{page.latest_post.description}</ReactMarkdown>
           <Link
@@ -45,6 +44,8 @@ const Home = ({ page, menu, footer }) => {
                   <Code language={block.language}>{block.code}</Code>
                 ) : block.template === 'text-block' ? (
                   <ReactMarkdown>{block.content}</ReactMarkdown>
+                ) : block.template === 'image-block' ? (
+                  <img src={block.image} />
                 ) : null}
               </div>
             ))}
