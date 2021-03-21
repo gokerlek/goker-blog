@@ -19,11 +19,6 @@
       "label": "About me",
       "link": "/about-me",
       "isInternal": true
-    },
-    {
-      "label": "Test",
-      "link": "/test-page",
-      "isInternal": true
     }
   ]
 }
