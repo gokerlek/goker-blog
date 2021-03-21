@@ -7,19 +7,19 @@ const Page = ({ page, menu, footer }) => {
   return (
     <Layout menu={menu.menuItems} footer={footer}>
       <Container>
+        {page.banner ? <img src={page.banner} /> : null}
+        <h1>{page.title}</h1>
         <div>
-          {page.banner ? <img src={page.banner} /> : null}
-          <h1>{page.title}</h1>
-          <div key={page.blocks[0].id}>
-            {page.blocks[0].title ? (
-              <div className="block-title">{page.blocks[0].title}</div>
-            ) : null}
-            {page.blocks[0].template === 'text-block' ? (
-              <ReactMarkdown>{page.blocks[0].content}</ReactMarkdown>
-            ) : page.blocks[1].template === 'image-block' ? (
-              <img src={page.blocks[1].image} />
-            ) : null}
-          </div>
+          {page.blocks.map((block) => (
+            <div key={block.id}>
+              {block.title ? <div className="block-title">{block.title}</div> : null}
+              {block.template === 'text-block' ? (
+                <ReactMarkdown>{block.content}</ReactMarkdown>
+              ) : block.template === 'image-block' ? (
+                <img src={block.image} />
+              ) : null}
+            </div>
+          ))}
         </div>
       </Container>
     </Layout>
