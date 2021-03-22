@@ -41,7 +41,6 @@ export const Footer = ({ footer }) => {
             background-color: #d1d8e0;
             padding-top: 5em;
           }
-          ,
           .footer :global(p) {
             margin: 0;
             font-weight: 300;
