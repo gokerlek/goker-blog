@@ -8,7 +8,7 @@ import { Code } from '../components/code';
 const Home = ({ page, menu, footer }) => {
   return (
     <Layout footer={footer} menu={menu.menuItems}>
-      <Container>
+      <Container width="960px" marg="0">
         <h1>{page.title}</h1>
         <div>
           <h3>{page.intro.title}</h3>
