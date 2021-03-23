@@ -1,14 +1,25 @@
+import ReactMarkdown from 'react-markdown';
 export const BlogPostWithImage = ({
   children,
   width = '720px',
-  marg = '4.3125em',
+  title,
+  banner,
+  summary,
 }) => {
   return (
     <div className="blog-post-with-image">
       {children}
+      <div className="image-text-sum-wrapper">
+        <div className="image-text-wrapper">
+          {banner ? <img src={banner} /> : null}
+          <div className="text-wrapper">
+            <h1>{title}</h1>
+          </div>
+        </div>
+        <div>{summary ? <ReactMarkdown>{summary}</ReactMarkdown> : null}</div>
+      </div>
       <style jsx>{`
         .blog-post-with-image {
-          margin: 0 auto ${marg};
           max-width: ${width};
         }
         .blog-post-with-image :global(h1) {
@@ -22,7 +33,7 @@ export const BlogPostWithImage = ({
         }
         :global(.image-text-sum-wrapper) {
           border-radius: 10px;
-          box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.32);
+          box-shadow: 3px 0px 30px 0px rgba(0, 0, 0, 0.15);
           margin: 2em 0;
           overflow: hidden;
         }

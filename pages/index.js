@@ -18,29 +18,20 @@ const Home = ({ page, menu, footer }) => {
         <div>
           <h3>{page.latest_post.title}</h3>
           <ReactMarkdown>{page.latest_post.description}</ReactMarkdown>
-          <BlogPostWithImage width="960px">
-            <Link
-              as={page.latest_post.blog_post.path.replace('blog', 'posts')}
-              href="/posts/[slug]">
-              <div className="image-text-sum-wrapper">
-                <div className="image-text-wrapper">
-                  {page.latest_post.blog_post.content.banner ? (
-                    <img src={page.latest_post.blog_post.content.banner} />
-                  ) : null}
-                  <div className="text-wrapper">
-                    <h1>{page.latest_post.blog_post.content.title}</h1>
-                  </div>
-                </div>
-                <div>
-                  {page.latest_post.blog_post.content.summary ? (
-                    <ReactMarkdown>
-                      {page.latest_post.blog_post.content.summary}
-                    </ReactMarkdown>
-                  ) : null}
-                </div>
-              </div>
-            </Link>
-          </BlogPostWithImage>
+
+          <Link
+            as={page.latest_post.blog_post.path.replace('blog', 'posts')}
+            href="/posts/[slug]">
+            <div>
+              <BlogPostWithImage
+                width="960px"
+                title={page.latest_post.blog_post.content.title}
+                banner={page.latest_post.blog_post.content.banner}
+                summary={page.latest_post.blog_post.content.summary}
+              />
+            </div>
+          </Link>
+
           <div>
             {page.blocks.map((block) => (
               <div key={block.id}>
