@@ -3,13 +3,14 @@ import { Container } from '../../components/container';
 import { getPost, getSlugsOfPosts } from '../../api/blog';
 import ReactMarkdown from 'react-markdown';
 import { Code } from '../../components/code';
+import { BlogBanner } from '../../components/blog-banner';
 
 const BlogPost = ({ page, menu, footer }) => {
   return (
     <Layout menu={menu.menuItems} footer={footer}>
+      <BlogBanner banner={page.banner} />
       <Container>
         <div key={page.key}>
-          <img src={page.banner} />
           <h1>{page.title}</h1>
           <div>{page.publish_date}</div>
           <div>
