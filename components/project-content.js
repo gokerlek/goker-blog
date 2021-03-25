@@ -12,7 +12,7 @@ export const ProjectContent = ({
     <div className="project-content">
       <h3>{title}</h3>
       <h6>{usedTechnology}</h6>
-      <p>{summery}</p>
+      <p>{summary}</p>
       <Link href={projectlink}>Click for more</Link>
       <style jsx>{`
         .project-content {
@@ -38,8 +38,7 @@ export const ProjectContent = ({
           text-decoration: none;
           color: #009fb7;
           font-size: 1em;
-          font-weight: 800
-   
+          font-weight: 800;
         }
       `}</style>
     </div>
