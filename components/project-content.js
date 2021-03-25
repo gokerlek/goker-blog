@@ -1,5 +1,13 @@
 import Link from 'next/link';
-export const ProjectContent = ({ title, usedTechnology, summery, projectlink }) => {
+import ReactMarkdown from 'react-markdown';
+export const ProjectContent = ({
+  title,
+  usedTechnology,
+  summary,
+  projectlink,
+  banner,
+  children,
+}) => {
   return (
     <div className="project-content">
       <h3>{title}</h3>
@@ -30,7 +38,8 @@ export const ProjectContent = ({ title, usedTechnology, summery, projectlink }) 
           text-decoration: none;
           color: #009fb7;
           font-size: 1em;
-          font-weight: 800;
+          font-weight: 800
+   
         }
       `}</style>
     </div>

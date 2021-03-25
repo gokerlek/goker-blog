@@ -9,6 +9,7 @@ import BlogPostWithImage from '../components/blog-post-with-image';
 const Home = ({ page, menu, footer }) => {
   return (
     <Layout footer={footer} menu={menu.menuItems}>
+
       <Container width="960px">
         <h1>{page.title}</h1>
         <div>
