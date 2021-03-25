@@ -29,7 +29,7 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
           }
           h3 {
             font-weight: 800;
-            font-size: 1.5em;
+            font-size: 1.2em;
             line-height: 2em;
           }
           h1 {

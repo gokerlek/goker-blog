@@ -24,6 +24,7 @@ export const BlogPostWithImage = ({
         }
         .blog-post-with-image :global(h1) {
           color: white;
+          font-size: 2em;
           margin: 0;
           line-height: 1.2em;
         }
@@ -36,6 +37,7 @@ export const BlogPostWithImage = ({
           box-shadow: 3px 0px 30px 0px rgba(0, 0, 0, 0.15);
           margin: 2em 0;
           overflow: hidden;
+          background-color: white;
         }
         :global(.image-text-wrapper) {
           border-radius: 10px;
