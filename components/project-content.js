@@ -53,6 +53,7 @@ export const ProjectContent = ({
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          background-color: white;
         }
         :global(.image-text-wrapper) {
           border-radius: 10px;
