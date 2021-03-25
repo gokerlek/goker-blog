@@ -39,6 +39,7 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
           }
           .layout {
             background-color: #e5e5e5;
+            min-width: auto;
           }
         `}</style>
         <style jsx>{`
