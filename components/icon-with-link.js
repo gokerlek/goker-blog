@@ -5,8 +5,8 @@ export const IconWithLink = ({ icon, link, color = '#009fb7' }) => {
       <IconComponent />
       <style jsx>{`
         .icon-wrapper {
-          width: 1.5em;
-          height: 1.5em;
+          width: 2em;
+          height: 2em;
           overflow: hidden;
           margin: 0.5em 1em 0.5em 0;
           display: inline-block;
