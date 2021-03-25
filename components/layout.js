@@ -19,13 +19,26 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
           }
 
           #root {
-            background-color: #f5f5f5;
+            background-color: #e5e5e5;
           }
 
           h1,
           h2,
           h3 {
-            color: #292929;
+            color: #4b6584;
+          }
+          h3 {
+            font-weight: 800;
+            font-size: 1.5em;
+            line-height: 2em;
+          }
+          h1 {
+            font-weight: 800;
+            font-size: 3em;
+            line-height: 1.5em;
+          }
+          .layout {
+            background-color: #e5e5e5;
           }
         `}</style>
         <style jsx>{`
