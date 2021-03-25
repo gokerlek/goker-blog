@@ -5,6 +5,7 @@ import { getProjects } from '../api/projects';
 import { Label } from '../components/label';
 
 const ProjectsPage = ({ page, menu, footer }) => {
+  console.log(page);
   return (
     <Layout title="Göker Blog - My projects" footer={footer} menu={menu.menuItems}>
       <Container width="960px">

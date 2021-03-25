@@ -2,7 +2,7 @@ import { Layout } from '../components/layout';
 import { Container } from '../components/container';
 import { getPosts } from '../api/blog';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
+import BlogPostWithImage from '../components/blog-post-with-image';
 
 const BlogPage = ({ page, menu, footer }) => {
   return (
@@ -14,13 +14,11 @@ const BlogPage = ({ page, menu, footer }) => {
             as={post.path.replace('blog/', 'posts/')}
             href="/posts/[slug]">
             <div>
-              {post.content.banner ? <img src={post.content.banner} /> : null}
-              <div>{post.content.title}</div>
-              <div>
-                {post.content.summary ? (
-                  <ReactMarkdown>{post.content.summary}</ReactMarkdown>
-                ) : null}
-              </div>
+              <BlogPostWithImage
+                title={post.content.title}
+                banner={post.content.banner}
+                summary={post.content.summary}
+              />
             </div>
           </Link>
         ))}
