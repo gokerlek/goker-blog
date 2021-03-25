@@ -11,7 +11,7 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
       </Head>
       <div className="layout">
         <Header menu={menu} />
-        <div> {children} </div>
+        <div>{children}</div>
         <Footer footer={footer} />
         <style jsx global>{`
           p {
@@ -27,28 +27,28 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
           h3 {
             color: #4b6584;
           }
+
           h3 {
             font-weight: 800;
             font-size: 1.2em;
             line-height: 2em;
           }
+
           h1 {
             font-weight: 800;
             font-size: 3em;
             line-height: 1.5em;
           }
-          .layout {
-            background-color: #e5e5e5;
-            min-width: auto;
-          }
         `}</style>
         <style jsx>{`
           .layout {
+            padding-top: 80px;
             display: grid;
-            grid-template-rows: 80px minmax(calc(100vh - 80px), max-content) minmax(
+            grid-template-rows: minmax(calc(100vh - 80px), max-content) minmax(
                 330px,
                 max-content
               );
+            background-color: #ffffff;
           }
         `}</style>
       </div>

@@ -24,13 +24,15 @@ const getIcon = (icons) => {
 export const Footer = ({ footer }) => {
   return (
     <div className="footer">
-      <Container width="960px" marg="0">
+      <Container>
         <div className="logo-text-wrapper">
           <div className="logo-wrapper">
             <Image src={logo} layout="fixed" width={59} height={59} alt="logo" />
           </div>
           <h3>
-            Göker <br /> Zafer
+            Göker
+            <br />
+            Zafer
           </h3>
         </div>
         <ReactMarkdown>{footer.shortBio}</ReactMarkdown>

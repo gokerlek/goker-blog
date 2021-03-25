@@ -1,55 +1,24 @@
 import { Layout } from '../components/layout';
-import Link from 'next/link';
+import { Blocks } from '../components/blocks';
 import { Container } from '../components/container';
 import { getHome } from '../api/home';
 import ReactMarkdown from 'react-markdown';
-import { Code } from '../components/code';
 import BlogPostWithImage from '../components/blog-post-with-image';
 
 const Home = ({ page, menu, footer }) => {
   return (
     <Layout footer={footer} menu={menu.menuItems}>
-
-      <Container width="960px">
+      <Container>
         <h1>{page.title}</h1>
-        <div>
-          <h3>{page.intro.title}</h3>
-          <ReactMarkdown>{page.intro.detail}</ReactMarkdown>
-        </div>
-        <div>
-          <h3>{page.latest_post.title}</h3>
-          <ReactMarkdown>{page.latest_post.description}</ReactMarkdown>
-
-          <Link
-            as={page.latest_post.blog_post.path.replace('blog', 'posts')}
-            href="/posts/[slug]">
-            <div>
-              <BlogPostWithImage
-                width="960px"
-                title={page.latest_post.blog_post.content.title}
-                banner={page.latest_post.blog_post.content.banner}
-                summary={page.latest_post.blog_post.content.summary}
-              />
-            </div>
-          </Link>
-
-          <div>
-            {page.blocks.map((block) => (
-              <div key={block.id}>
-                {block.title ? (
-                  <div className="block-title">{block.title}</div>
-                ) : null}
-                {block.template === 'code-block' ? (
-                  <Code language={block.language}>{block.code}</Code>
-                ) : block.template === 'text-block' ? (
-                  <ReactMarkdown>{block.content}</ReactMarkdown>
-                ) : block.template === 'image-block' ? (
-                  <img src={block.image} />
-                ) : null}
-              </div>
-            ))}
-          </div>
-        </div>
+        <h3>{page.intro.title}</h3>
+        <ReactMarkdown>{page.intro.detail}</ReactMarkdown>
+        <h3>{page.latest_post.title}</h3>
+        <ReactMarkdown>{page.latest_post.description}</ReactMarkdown>
+        <BlogPostWithImage
+          blog={page.latest_post.blog_post.content}
+          path={page.latest_post.blog_post.path}
+        />
+        <Blocks blocks={page.blocks} />
       </Container>
     </Layout>
   );

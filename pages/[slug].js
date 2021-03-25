@@ -1,7 +1,7 @@
 import { Layout } from '../components/layout';
 import { Container } from '../components/container';
 import { getPage, getSlugsOfPages } from '../api/pages';
-import ReactMarkdown from 'react-markdown';
+import { Blocks } from '../components/blocks';
 
 const Page = ({ page, menu, footer }) => {
   return (
@@ -10,16 +10,7 @@ const Page = ({ page, menu, footer }) => {
         {page.banner ? <img src={page.banner} /> : null}
         <h1>{page.title}</h1>
         <div>
-          {page.blocks.map((block) => (
-            <div key={block.id}>
-              {block.title ? <div className="block-title">{block.title}</div> : null}
-              {block.template === 'text-block' ? (
-                <ReactMarkdown>{block.content}</ReactMarkdown>
-              ) : block.template === 'image-block' ? (
-                <img src={block.image} />
-              ) : null}
-            </div>
-          ))}
+          <Blocks blocks={page.blocks} />
         </div>
       </Container>
     </Layout>
