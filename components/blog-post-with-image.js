@@ -20,9 +20,6 @@ export const BlogPostWithImage = ({
           <div>{summary ? <ReactMarkdown>{summary}</ReactMarkdown> : null}</div>
         </div>
         <style jsx>{`
-          .blog-post-with-image {
-            width: 100%;
-          }
           .blog-post-with-image :global(h1) {
             color: white;
             font-size: 2em;
