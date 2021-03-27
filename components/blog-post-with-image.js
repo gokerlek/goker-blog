@@ -1,60 +1,37 @@
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
+import { BlogPostHeader } from './blog-post-header';
+import { BlogBanner } from './blog-banner';
 
-export const BlogPostWithImage = ({
-  children,
-  blog: { title, banner, summary },
-  path,
-}) => {
+export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) => {
   return (
-    <Link as={path.replace('blog', 'posts')} href="/posts/[slug]">
-      <div className="blog-post-with-image">
-        {children}
+    <>
+      <Link as={path.replace('blog', 'posts')} href="/posts/[slug]">
         <div className="image-text-sum-wrapper">
           <div className="image-text-wrapper">
-            {banner ? <img src={banner} /> : null}
-            <div className="text-wrapper">
-              <h1>{title}</h1>
-            </div>
+            <BlogBanner small banner={banner} />
+            <BlogPostHeader header={title} />
           </div>
-          <div>{summary ? <ReactMarkdown>{summary}</ReactMarkdown> : null}</div>
+          {summary ? <ReactMarkdown>{summary}</ReactMarkdown> : null}
         </div>
-        <style jsx>{`
-          .blog-post-with-image :global(h1) {
-            color: white;
-            font-size: 2em;
-            margin: 0;
-            line-height: 1.2em;
-          }
-          .blog-post-with-image :global(p) {
-            margin: 2em;
-            line-height: 1.2em;
-          }
-          :global(.image-text-sum-wrapper) {
-            border-radius: 10px;
-            filter: drop-shadow(0px 18px 80px rgba(0, 0, 0, 0.07));
-            margin: 2em 0;
-            overflow: hidden;
-            background-color: white;
-          }
-          :global(.image-text-wrapper) {
-            border-radius: 10px;
-            position: relative;
-          }
-          :global(.text-wrapper) {
-            position: absolute;
-            font-size: 1.5em;
-            bottom: 0;
-            padding: 1em;
-          }
-          :global(img) {
-            width: 100%;
-            max-height: 16.5em;
-            object-fit: cover;
-          }
-        `}</style>
-      </div>
-    </Link>
+      </Link>
+      <style jsx>{`
+        .image-text-sum-wrapper :global(p) {
+          margin: 2em;
+          line-height: 1.2em;
+        }
+        .image-text-sum-wrapper {
+          border-radius: 10px;
+          filter: drop-shadow(0px 18px 80px rgba(0, 0, 0, 0.07));
+          margin: 2em 0;
+          overflow: hidden;
+          background-color: white;
+        }
+        .image-text-wrapper {
+          position: relative;
+        }
+      `}</style>
+    </>
   );
 };
 export default BlogPostWithImage;
