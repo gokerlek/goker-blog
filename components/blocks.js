@@ -1,5 +1,5 @@
 import { Code } from './code';
-import ReactMarkdown from 'react-markdown';
+import RichText from './rich-text';
 
 export const Blocks = ({ blocks }) => {
   return (
@@ -10,7 +10,7 @@ export const Blocks = ({ blocks }) => {
           {block.template === 'code-block' ? (
             <Code language={block.language}>{block.code}</Code>
           ) : block.template === 'text-block' ? (
-            <ReactMarkdown>{block.content}</ReactMarkdown>
+            <RichText>{block.content}</RichText>
           ) : block.template === 'image-block' ? (
             <img src={block.image} />
           ) : null}

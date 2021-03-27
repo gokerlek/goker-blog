@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
 import { ImageTextWrapper } from './image-text-wrapper';
+import { RichText } from './rich-text';
 
 export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) => {
   return (
@@ -8,14 +8,10 @@ export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) =>
       <Link as={path.replace('blog', 'posts')} href="/posts/[slug]">
         <div className="image-text-sum-wrapper">
           <ImageTextWrapper title={title} banner={banner} />
-          {summary ? <ReactMarkdown>{summary}</ReactMarkdown> : null}
+          {summary ? <RichText small>{summary}</RichText> : null}
         </div>
       </Link>
       <style jsx>{`
-        .image-text-sum-wrapper :global(p) {
-          margin: 2em;
-          line-height: 1.3em;
-        }
         .image-text-sum-wrapper {
           border-radius: 10px;
           box-shadow: 0px 18px 80px rgba(0, 0, 0, 0.07),

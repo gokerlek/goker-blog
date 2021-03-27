@@ -2,7 +2,7 @@ import { Layout } from '../components/layout';
 import { Blocks } from '../components/blocks';
 import { Container } from '../components/container';
 import { getHome } from '../api/home';
-import ReactMarkdown from 'react-markdown';
+import { RichText } from '../components/rich-text';
 import BlogPostWithImage from '../components/blog-post-with-image';
 
 const Home = ({ page, menu, footer }) => {
@@ -11,9 +11,9 @@ const Home = ({ page, menu, footer }) => {
       <Container>
         <h1>{page.title}</h1>
         <h3>{page.intro.title}</h3>
-        <ReactMarkdown>{page.intro.detail}</ReactMarkdown>
+        <RichText>{page.intro.detail}</RichText>
         <h3>{page.latest_post.title}</h3>
-        <ReactMarkdown>{page.latest_post.description}</ReactMarkdown>
+        <RichText>{page.latest_post.description}</RichText>
         <BlogPostWithImage
           blog={page.latest_post.blog_post.content}
           path={page.latest_post.blog_post.path}

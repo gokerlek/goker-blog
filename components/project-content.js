@@ -1,4 +1,4 @@
-import ReactMarkdown from 'react-markdown';
+import { RichText } from './rich-text';
 export const ProjectContent = ({
   title,
   usedTechnology,
@@ -16,7 +16,7 @@ export const ProjectContent = ({
             <h2>{title}</h2>
           </div>
         </div>
-        <div>{summary ? <ReactMarkdown>{summary}</ReactMarkdown> : null}</div>
+        <div>{summary ? <RichText small>{summary}</RichText> : null}</div>
         <div>{usedTechnology}</div>
       </div>
       <style jsx>{`
@@ -40,10 +40,7 @@ export const ProjectContent = ({
           text-align: center;
           margin: 0;
         }
-        .blog-post-with-image :global(p) {
-          margin: 0.5em 1em;
-          line-height: 1.2em;
-        }
+
         :global(.image-text-sum-wrapper) {
           border-radius: 10px;
           box-shadow: 3px 0px 30px 0px rgba(0, 0, 0, 0.15);
