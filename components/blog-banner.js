@@ -1,4 +1,4 @@
-export const BlogBanner = ({ banner, small }) => {
+export const BlogBanner = ({ banner, small = false }) => {
   return (
     <>
       {banner ? <img src={banner} /> : null}
