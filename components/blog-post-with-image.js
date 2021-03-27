@@ -35,7 +35,7 @@ export const BlogPostWithImage = ({
           }
           :global(.image-text-sum-wrapper) {
             border-radius: 10px;
-            box-shadow: 3px 0px 30px 0px rgba(0, 0, 0, 0.15);
+            filter: drop-shadow(0px 18px 80px rgba(0, 0, 0, 0.07));
             margin: 2em 0;
             overflow: hidden;
             background-color: white;
