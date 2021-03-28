@@ -7,7 +7,7 @@ export const Copyright = ({ text }) => {
           font-weight: 300;
           color: #a5b1c2;
           text-align: center;
-          margin-top: 0.2em;
+          margin: 3em 0 1.5em 0;
           font-size: 0.8em;
         }
       `}</style>
