@@ -9,20 +9,15 @@ const ProjectsPage = ({ page, menu, footer }) => {
   return (
     <Layout title="Göker Blog - My projects" footer={footer} menu={menu.menuItems}>
       <Container width="960px">
-        <div>
-          {page.list.map((data) => (
-            <ProjectContent
-              key={data.id}
-              banner={data.content.thumbnail}
-              title={data.content.title}
-              usedTechnology={data.content.technologies.map((tech) => (
-                <Label usedTechnologies={tech} />
-              ))}
-              summary={data.content.description}
-              projectlink={data.content.projectLink}
-            />
-          ))}
-        </div>
+        {page.list.map((data) => (
+          <ProjectContent
+            key={data.id}
+            projects={data.content}
+            usedTechnology={data.content.technologies.map((tech) => (
+              <Label usedTechnologies={tech} />
+            ))}
+          />
+        ))}
       </Container>
     </Layout>
   );

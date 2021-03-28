@@ -1,24 +1,23 @@
 import { RichText } from './rich-text';
+import { Banner } from './banner';
+
 export const ProjectContent = ({
-  title,
+  projects: { title, thumbnail, description, projectLink },
   usedTechnology,
-  summary,
-  banner,
-  children,
 }) => {
   return (
     <div className="blog-post-with-image">
-      {children}
       <div className="image-text-sum-wrapper">
-        {banner ? <img src={banner} /> : null}
+        {thumbnail ? <Banner xsmall banner={thumbnail} /> : null}
         <div className="text-wrapper">{title}</div>
-        {summary ? <RichText small>{summary}</RichText> : null}
+        {description ? <RichText small>{description}</RichText> : null}
         <div className="label-container">{usedTechnology}</div>
       </div>
       <style jsx>{`
         .blog-post-with-image {
           max-width: 460px;
         }
+
         .label-container {
           margin-left: 1.3em;
         }
@@ -42,11 +41,6 @@ export const ProjectContent = ({
           line-height: 1.2em;
           text-align: center;
           color: #4b6584;
-        }
-        :global(img) {
-          width: 100%;
-          max-height: 9em;
-          object-fit: cover;
         }
       `}</style>
     </div>
