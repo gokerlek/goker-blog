@@ -1,15 +1,15 @@
-export const BlogBanner = ({ children, banner }) => {
+export const BlogBanner = ({ banner, small = false }) => {
   return (
-    <div className="blog-banner">
-      <img src={banner} />
+    <>
+      {banner ? <img src={banner} /> : null}
 
       <style jsx>{`
-        :global(img) {
+        img {
           width: 100%;
-          height: 320px;
+          height: ${small ? 16.5 : 21.25}em;
           object-fit: cover;
         }
       `}</style>
-    </div>
+    </>
   );
 };

@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { Container } from './container';
-import ReactMarkdown from 'react-markdown';
+import RichText from './rich-text';
 import logo from '../image/fil.png';
 import Image from 'next/image';
 
@@ -35,7 +35,7 @@ export const Footer = ({ footer }) => {
             Zafer
           </h3>
         </div>
-        <ReactMarkdown>{footer.shortBio}</ReactMarkdown>
+        <RichText>{footer.shortBio}</RichText>
         {footer.socialLinks.map((socialLink) => (
           <IconWithLink
             key={socialLink.id}
