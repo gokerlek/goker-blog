@@ -30,16 +30,6 @@ export const ProjectContent = ({
           line-height: 1.2em;
           text-align: center;
         }
-        .blog-post-with-image :global(h6) {
-          color: white;
-          padding: 0.5em 0.5em 0.5em 1em;
-          border-radius: 4px;
-          background-color: #0fb9b1;
-          font-weight: 300;
-          line-height: 1.2em;
-          text-align: center;
-          margin: 0;
-        }
 
         :global(.image-text-sum-wrapper) {
           border-radius: 10px;
