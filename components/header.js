@@ -3,7 +3,6 @@ import { Container } from './container';
 import { Logo } from './logo';
 
 export const Header = ({ menu }) => {
-  console.log(menu);
   return (
     <div className="header">
       <Container>

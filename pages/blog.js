@@ -4,7 +4,6 @@ import { getPosts } from '../api/blog';
 import BlogPostWithImage from '../components/blog-post-with-image';
 
 const BlogPage = ({ page, menu, footer }) => {
-  console.log(page);
   return (
     <Layout title="Göker Blog" footer={footer} menu={menu.menuItems}>
       <Container small>
