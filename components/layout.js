@@ -31,6 +31,7 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
             font-weight: 800;
             font-size: 1.2em;
             line-height: 2em;
+            color: #4b6584;
           }
         `}</style>
         <style jsx>{`
