@@ -45,9 +45,7 @@ export const Header = ({ menu }) => {
             margin: 20px;
             color: #4b6584;
           }
-          .header :global(a):hover {
-            color: #009fb7;
-          }
+          .header :global(a):hover,
           .header :global(a).active {
             color: #009fb7;
           }

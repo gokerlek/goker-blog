@@ -2,6 +2,7 @@ export const Copyright = ({ text }) => {
   return (
     <div className="copyright">
       {text}
+
       <style jsx>{`
         .copyright {
           font-weight: 300;

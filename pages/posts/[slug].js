@@ -2,13 +2,13 @@ import { Layout } from '../../components/layout';
 import { Container } from '../../components/container';
 import { getPost, getSlugsOfPosts } from '../../api/blog';
 import { Blocks } from '../../components/blocks';
-import { BlogBanner } from '../../components/blog-banner';
+import { Banner } from '../../components/banner';
 import { PageHeader } from '../../components/page-header';
 
 const BlogPost = ({ page, menu, footer }) => {
   return (
     <Layout menu={menu.menuItems} footer={footer}>
-      <BlogBanner banner={page.banner} />
+      <Banner banner={page.banner} />
       <Container>
         <div key={page.key}>
           <PageHeader>{page.title}</PageHeader>

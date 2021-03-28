@@ -3,17 +3,18 @@ import { Blocks } from '../components/blocks';
 import { Container } from '../components/container';
 import { getHome } from '../api/home';
 import { RichText } from '../components/rich-text';
-import BlogPostWithImage from '../components/blog-post-with-image';
+import { BlogPostWithImage } from '../components/blog-post-with-image';
 import { PageHeader } from '../components/page-header';
+import { Subtitle } from '../components/subtitle';
 
 const Home = ({ page, menu, footer }) => {
   return (
     <Layout footer={footer} menu={menu.menuItems}>
       <Container>
         <PageHeader>{page.title}</PageHeader>
-        <h3>{page.intro.title}</h3>
+        <Subtitle>{page.intro.title}</Subtitle>
         <RichText>{page.intro.detail}</RichText>
-        <h3>{page.latest_post.title}</h3>
+        <Subtitle>{page.latest_post.title}</Subtitle>
         <RichText>{page.latest_post.description}</RichText>
         <BlogPostWithImage
           blog={page.latest_post.blog_post.content}

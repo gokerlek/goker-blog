@@ -13,27 +13,6 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
         <Header menu={menu} />
         <div>{children}</div>
         <Footer footer={footer} />
-        <style jsx global>{`
-          p {
-            color: #292929;
-          }
-
-          #root {
-            background-color: #e5e5e5;
-          }
-
-          h2,
-          h3 {
-            color: #4b6584;
-          }
-
-          h3 {
-            font-weight: 800;
-            font-size: 1.2em;
-            line-height: 2em;
-            color: #4b6584;
-          }
-        `}</style>
         <style jsx>{`
           .layout {
             padding-top: 80px;
