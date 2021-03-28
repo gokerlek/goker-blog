@@ -10,9 +10,7 @@ const Page = ({ page, menu, footer }) => {
       <Container>
         {page.banner ? <img src={page.banner} /> : null}
         <PageHeader>{page.title}</PageHeader>
-        <div>
-          <Blocks blocks={page.blocks} />
-        </div>
+        <Blocks blocks={page.blocks} />
       </Container>
     </Layout>
   );
