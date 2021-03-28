@@ -35,7 +35,7 @@ export const Footer = ({ footer }) => {
             Zafer
           </h3>
         </div>
-        <RichText>{footer.shortBio}</RichText>
+        <RichText narrow>{footer.shortBio}</RichText>
         {footer.socialLinks.map((socialLink) => (
           <IconWithLink
             key={socialLink.id}
@@ -56,10 +56,7 @@ export const Footer = ({ footer }) => {
             background-color: #d1d8e0;
             padding-top: 5em;
           }
-          .footer :global(p) {
-            margin: 0;
-            font-weight: 300;
-          }
+
           h3 {
             font-weight: 800;
             line-height: 2;
