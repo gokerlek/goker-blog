@@ -1,7 +1,6 @@
-export const Label = ({ children, usedTechnologies }) => {
+export const Label = ({ usedTechnologies }) => {
   return (
     <div className="label">
-      {children}
       {usedTechnologies}
       <style jsx>{`
         .label {

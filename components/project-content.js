@@ -10,28 +10,20 @@ export const ProjectContent = ({
     <div className="blog-post-with-image">
       {children}
       <div className="image-text-sum-wrapper">
-        <div className="image-text-wrapper">
-          {banner ? <img src={banner} /> : null}
-          <div className="text-wrapper">
-            <h2>{title}</h2>
-          </div>
-        </div>
-        <div>{summary ? <RichText small>{summary}</RichText> : null}</div>
-        <div>{usedTechnology}</div>
+        {banner ? <img src={banner} /> : null}
+        <div className="text-wrapper">{title}</div>
+        {summary ? <RichText small>{summary}</RichText> : null}
+        <div className="label-container">{usedTechnology}</div>
       </div>
       <style jsx>{`
         .blog-post-with-image {
           max-width: 460px;
         }
-        .blog-post-with-image :global(h2) {
-          color: #4b6584;
-          margin: 0.2em;
-          font-weight: 600;
-          line-height: 1.2em;
-          text-align: center;
+        .label-container {
+          margin-left: 1.3em;
         }
 
-        :global(.image-text-sum-wrapper) {
+        .image-text-sum-wrapper {
           border-radius: 10px;
           box-shadow: 3px 0px 30px 0px rgba(0, 0, 0, 0.15);
           min-height: 400px;
@@ -42,12 +34,14 @@ export const ProjectContent = ({
           justify-content: space-between;
           background-color: white;
         }
-        :global(.image-text-wrapper) {
-          border-radius: 10px;
-        }
-        :global(.text-wrapper) {
-          font-size: 1.5em;
-          bottom: 0;
+
+        .text-wrapper {
+          font-size: 2.5em;
+          margin-top: 0.4em;
+          font-weight: 600;
+          line-height: 1.2em;
+          text-align: center;
+          color: #4b6584;
         }
         :global(img) {
           width: 100%;

@@ -13,9 +13,7 @@ const BlogPost = ({ page, menu, footer }) => {
         <div key={page.key}>
           <PageHeader>{page.title}</PageHeader>
           <div>{page.publish_date}</div>
-          <div>
-            <Blocks blocks={page.blocks} />
-          </div>
+          <Blocks blocks={page.blocks} />
         </div>
       </Container>
     </Layout>
