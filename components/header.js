@@ -1,16 +1,14 @@
 import Link from 'next/link';
 import { Container } from './container';
-import Image from 'next/image';
-import logo from '../image/fil.png';
+import { Logo } from './logo';
+
 export const Header = ({ menu }) => {
   console.log(menu);
   return (
     <div className="header">
       <Container>
         <div className="navbar">
-          <div className="logo-wrapper">
-            <Image src={logo} layout="fixed" width={59} height={59} alt="logo" />
-          </div>
+          <Logo small />
           <div className="menu">
             {menu.map((menuItem) => (
               <Link key={menuItem.id} href={menuItem.link}>
