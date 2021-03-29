@@ -1,7 +1,7 @@
 export const IconWithLink = ({ icon, link, color = '#009fb7' }) => {
   const IconComponent = icon;
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <IconComponent className="icon-wrapper" />
       <style jsx>{`
         .icon-wrapper {
