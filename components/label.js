@@ -1,7 +1,7 @@
-export const Label = ({ usedTechnologies }) => {
+export const Label = ({ children }) => {
   return (
     <div className="label">
-      {usedTechnologies}
+      {children}
       <style jsx>{`
         .label {
           width: auto;

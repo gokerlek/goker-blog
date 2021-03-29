@@ -1,9 +1,9 @@
 import { RichText } from './rich-text';
 import { Banner } from './banner';
+import { Label } from './label';
 
 export const ProjectContent = ({
-  projects: { title, thumbnail, description, projectLink },
-  usedTechnology,
+  projects: { title, thumbnail, description, projectLink, technologies },
 }) => {
   return (
     <div className="blog-post-with-image">
@@ -11,7 +11,11 @@ export const ProjectContent = ({
         {thumbnail ? <Banner xsmall banner={thumbnail} /> : null}
         <div className="text-wrapper">{title}</div>
         {description ? <RichText small>{description}</RichText> : null}
-        <div className="label-container">{usedTechnology}</div>
+        <div className="label-container">
+          {technologies.map((technology) => (
+            <Label>{technology}</Label>
+          ))}
+        </div>
       </div>
       <style jsx>{`
         .blog-post-with-image {
