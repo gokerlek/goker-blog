@@ -37,11 +37,16 @@ export const Footer = ({ footer }) => {
         ))}
         <Copyright>{footer.copyright}</Copyright>
       </Container>
+
       <style jsx>
         {`
           .footer {
             background-color: #d1d8e0;
             padding-top: 2.5em;
+          }
+
+          .footer :global(p) {
+            line-height: 0.8em;
           }
         `}
       </style>

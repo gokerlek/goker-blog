@@ -1,5 +1,5 @@
 import { RichText } from './rich-text';
-import { Banner } from './banner';
+import { Banner, BannerSize } from './banner';
 import { Label } from './label';
 
 export const ProjectContent = ({
@@ -8,7 +8,7 @@ export const ProjectContent = ({
   return (
     <div className="blog-post-with-image">
       <div className="image-text-sum-wrapper">
-        {thumbnail ? <Banner xsmall banner={thumbnail} /> : null}
+        {thumbnail ? <Banner size={BannerSize.XSMALL} banner={thumbnail} /> : null}
         <div className="text-wrapper">{title}</div>
         {description ? <RichText small>{description}</RichText> : null}
         <div className="label-container">
@@ -36,6 +36,10 @@ export const ProjectContent = ({
           flex-direction: column;
           justify-content: space-between;
           background-color: white;
+        }
+
+        .image-text-sum-wrapper :global(p) {
+          margin: 1.5em 2em;
         }
 
         .text-wrapper {
