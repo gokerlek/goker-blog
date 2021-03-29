@@ -1,7 +1,7 @@
-export const Copyright = ({ text }) => {
+export const Copyright = ({ children }) => {
   return (
     <div className="copyright">
-      {text}
+      {children}
 
       <style jsx>{`
         .copyright {

@@ -35,7 +35,7 @@ export const Footer = ({ footer }) => {
             color={socialLink.color}
           />
         ))}
-        <Copyright text={footer.copyright} />
+        <Copyright>{footer.copyright}</Copyright>
       </Container>
       <style jsx>
         {`
