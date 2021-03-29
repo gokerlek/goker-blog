@@ -25,7 +25,7 @@ export const Footer = ({ footer }) => {
   return (
     <div className="footer">
       <Container>
-        <Logo name />
+        <Logo hasName />
         <RichText narrow>{footer.shortBio}</RichText>
         {footer.socialLinks.map((socialLink) => (
           <IconWithLink

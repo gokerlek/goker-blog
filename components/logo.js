@@ -1,7 +1,7 @@
 import logo from '../image/fil.png';
 import Image from 'next/image';
 
-export const Logo = ({ name = false, small = false }) => {
+export const Logo = ({ hasName = false, small = false }) => {
   return (
     <div className="logo">
       <Image
@@ -11,7 +11,7 @@ export const Logo = ({ name = false, small = false }) => {
         height={small ? 48 : 59}
         alt="logo"
       />
-      {name ? (
+      {hasName ? (
         <div className="text">
           Göker
           <br />
