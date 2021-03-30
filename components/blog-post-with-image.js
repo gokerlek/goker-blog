@@ -1,13 +1,18 @@
 import Link from 'next/link';
 import { ImageTextWrapper } from './image-text-wrapper';
+import { ReadingMinutes } from './reading-minutes';
 import { RichText } from './rich-text';
 
-export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) => {
+export const BlogPostWithImage = ({
+  blog: { title, banner, summary, blocks },
+  path,
+}) => {
   return (
     <>
       <Link as={path.replace('blog', 'posts')} href="/posts/[slug]">
         <div className="image-text-sum-wrapper">
           <ImageTextWrapper title={title} banner={banner} />
+          <ReadingMinutes text={summary} />
           {summary ? <RichText>{summary}</RichText> : null}
         </div>
       </Link>
