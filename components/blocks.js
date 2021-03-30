@@ -1,5 +1,5 @@
 import { Code } from './code';
-import RichText from './rich-text';
+import { RichText } from './rich-text';
 
 export const Blocks = ({ blocks }) => {
   return (

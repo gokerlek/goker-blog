@@ -8,9 +8,10 @@ export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) =>
       <Link as={path.replace('blog', 'posts')} href="/posts/[slug]">
         <div className="image-text-sum-wrapper">
           <ImageTextWrapper title={title} banner={banner} />
-          {summary ? <RichText small>{summary}</RichText> : null}
+          {summary ? <RichText>{summary}</RichText> : null}
         </div>
       </Link>
+
       <style jsx>{`
         .image-text-sum-wrapper {
           border-radius: 10px;
@@ -19,6 +20,10 @@ export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) =>
           margin: 2em 0;
           overflow: hidden;
           background-color: white;
+        }
+
+        .image-text-sum-wrapper :global(p) {
+          margin: 1.5em 2em;
         }
       `}</style>
     </>

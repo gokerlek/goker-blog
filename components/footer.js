@@ -4,9 +4,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { Container } from './container';
-import RichText from './rich-text';
-import logo from '../image/fil.png';
-import Image from 'next/image';
+import { RichText } from './rich-text';
+import { Logo } from './logo';
+import { Copyright } from './copyright';
 
 const getIcon = (icons) => {
   switch (icons) {
@@ -25,16 +25,7 @@ export const Footer = ({ footer }) => {
   return (
     <div className="footer">
       <Container>
-        <div className="logo-text-wrapper">
-          <div className="logo-wrapper">
-            <Image src={logo} layout="fixed" width={59} height={59} alt="logo" />
-          </div>
-          <h3>
-            Göker
-            <br />
-            Zafer
-          </h3>
-        </div>
+        <Logo hasName />
         <RichText>{footer.shortBio}</RichText>
         {footer.socialLinks.map((socialLink) => (
           <IconWithLink
@@ -44,32 +35,18 @@ export const Footer = ({ footer }) => {
             color={socialLink.color}
           />
         ))}
-        <h5>{footer.copyright}</h5>
+        <Copyright>{footer.copyright}</Copyright>
       </Container>
+
       <style jsx>
         {`
-          .logo-text-wrapper {
-            display: flex;
-            align-items: center;
-          }
           .footer {
             background-color: #d1d8e0;
-            padding-top: 5em;
+            padding-top: 2.5em;
           }
+
           .footer :global(p) {
-            margin: 0;
-            font-weight: 300;
-          }
-          h3 {
-            font-weight: 800;
-            line-height: 2;
-            margin-left: 0.5em;
-          }
-          h5 {
-            font-weight: 300;
-            color: #a5b1c2;
-            text-align: center;
-            margin-top: 3.8em;
+            line-height: 0.8em;
           }
         `}
       </style>

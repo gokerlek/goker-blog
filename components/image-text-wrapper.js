@@ -1,10 +1,10 @@
-import { BlogBanner } from './blog-banner';
+import { Banner, BannerSize } from './banner';
 import { BlogPostHeader } from './blog-post-header';
 
 export const ImageTextWrapper = ({ banner, title }) => {
   return (
     <div className="image-text-wrapper">
-      <BlogBanner small banner={banner} />
+      <Banner size={BannerSize.SMALL} banner={banner} />
       <BlogPostHeader header={title} banner={banner} />
 
       <style jsx>{`
