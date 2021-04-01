@@ -12,6 +12,7 @@ const BlogPage = ({ page, menu, footer }) => {
             key={post.content.id}
             blog={post.content}
             path={post.path}
+            goker={post}
           />
         ))}
       </Container>

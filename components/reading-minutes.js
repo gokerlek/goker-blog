@@ -4,10 +4,7 @@ export const ReadingMinutes = ({ text }) => {
   return (
     <div className="reading-minutes">
       <FaStopwatch />
-      {Math.floor(text.split(' ').length / 180) < 1
-        ? Math.floor(text.split(' ').length / 3) + ' seconds '
-        : Math.floor(text.split(' ').length / 180) + ' minutes '}
-      <>reads</>
+      {text}
       <style jsx>{`
         .reading-minutes {
           color: #a5b1c2;
