@@ -5,18 +5,17 @@ import { Blocks } from '../../components/blocks';
 import { Banner } from '../../components/banner';
 import { PageHeader } from '../../components/page-header';
 import { useReadingMinutesFromBlocks } from '../../components/use-reading-minutes-from-blocks';
+import { ReadingMinutes } from '../../components/reading-minutes';
 
 const BlogPost = ({ page, menu, footer }) => {
-  const readingMinutesText = useReadingMinutesFromBlocks(
-    page && page.blocks ? page.blocks : [],
-  );
+  const readingMinutesText = useReadingMinutesFromBlocks(page.blocks);
   return (
     <Layout menu={menu.menuItems} footer={footer}>
       <Banner banner={page.banner} />
       <Container>
         <div key={page.key}>
           <PageHeader>{page.title}</PageHeader>
-          <ReadingMinutes text={readingMinutesText} />
+          <ReadingMinutes small text={readingMinutesText} />
           <div>{page.publish_date}</div>
           <Blocks blocks={page.blocks} />
         </div>
