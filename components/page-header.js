@@ -8,6 +8,7 @@ export const PageHeader = ({ children }) => {
           font-size: 3em;
           line-height: 1.5em;
           color: #4b6584;
+          margin: 0.7em 0 0.4em;
         }
       `}</style>
     </>

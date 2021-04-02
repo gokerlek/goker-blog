@@ -1,13 +1,22 @@
 import Link from 'next/link';
 import { ImageTextWrapper } from './image-text-wrapper';
+import { ReadingMinutes } from './reading-minutes';
 import { RichText } from './rich-text';
+import { useReadingMinutesFromBlocks } from './use-reading-minutes-from-blocks';
 
-export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) => {
+export const BlogPostWithImage = ({
+  blog: { title, banner, summary, blocks },
+  path,
+}) => {
+  const readingMinutesText = useReadingMinutesFromBlocks(blocks);
   return (
     <>
       <Link as={path.replace('blog', 'posts')} href="/posts/[slug]">
         <div className="image-text-sum-wrapper">
           <ImageTextWrapper title={title} banner={banner} />
+          <div className="blog-reading-minutes">
+            <ReadingMinutes text={readingMinutesText} />
+          </div>
           {summary ? <RichText>{summary}</RichText> : null}
         </div>
       </Link>
@@ -23,7 +32,11 @@ export const BlogPostWithImage = ({ blog: { title, banner, summary }, path }) =>
         }
 
         .image-text-sum-wrapper :global(p) {
-          margin: 1.5em 2em;
+          margin: 1em 2em 1.5em;
+        }
+
+        .blog-reading-minutes :global(p) {
+          margin: 1em 2.3em 0em;
         }
       `}</style>
     </>
