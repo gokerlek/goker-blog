@@ -10,6 +10,5 @@ export const useReadingMinutesFromBlocks = (blocks) => {
     readingMinutes < 1
       ? `${Math.floor(readingMinutes * 60)} seconds read.`
       : `${Math.floor(readingMinutes)} minutes read.`;
-  console.log(allTheTextToBeCalculated);
   return readingTimeText;
 };
