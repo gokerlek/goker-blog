@@ -1,4 +1,3 @@
-import { getPosts } from '../api/blog';
 import { usePreviousPost } from './use-previous-post';
 import { useNextPost } from './use-next-post';
 
@@ -30,9 +29,4 @@ export const PostNavigator = ({ page, posts }) => {
       </style>
     </div>
   );
-};
-
-export const getStaticProps = async () => {
-  const posts = await getPosts();
-  return { props: { ...props, posts } };
 };
