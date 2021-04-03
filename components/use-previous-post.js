@@ -16,9 +16,9 @@ export const usePreviousPost = (page, posts) => {
     <>
       {indexNumber - 1 === -1 ? null : (
         <>
-          <div>Previous Page</div>
+          Previous: <br />
           <Link key={previousPageId} href={`/posts${previousPagePath}`}>
-            {previousPageTitle}
+            {`👈 ${previousPageTitle}`}
           </Link>
         </>
       )}

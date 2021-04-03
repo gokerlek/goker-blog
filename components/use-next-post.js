@@ -16,9 +16,10 @@ export const useNextPost = (page, posts) => {
     <>
       {indexNumber + 1 === indexLength ? null : (
         <>
-          <div>Next Page</div>
+          Next:
+          <br />
           <Link key={nextPageId} href={`/posts${nextPagePath}`}>
-            {nextPageTitle}
+            {`${nextPageTitle} 👉`}
           </Link>
         </>
       )}

@@ -7,14 +7,10 @@ import { PageHeader } from '../../components/page-header';
 import { useReadingMinutesFromBlocks } from '../../components/use-reading-minutes-from-blocks';
 import { ReadingMinutes } from '../../components/reading-minutes';
 import { getPosts } from '../../api/blog';
-import { usePreviousPost } from '../../components/use-previous-post';
-import { useNextPost } from '../../components/use-next-post';
+import { PostNavigator } from '../../components/post-navigator';
 
 const BlogPost = ({ page, menu, footer, posts }) => {
-  const previousPost = usePreviousPost(page, posts);
-  const nextPost = useNextPost(page, posts);
   const readingMinutesText = useReadingMinutesFromBlocks(page.blocks);
-  console.log(posts);
 
   return (
     <Layout menu={menu.menuItems} footer={footer}>
@@ -25,8 +21,7 @@ const BlogPost = ({ page, menu, footer, posts }) => {
           <ReadingMinutes text={readingMinutesText} />
           <div>{page.publish_date}</div>
           <Blocks blocks={page.blocks} />
-          {previousPost}
-          {nextPost}
+          <PostNavigator page={page} posts={posts} />
         </div>
       </Container>
     </Layout>
