@@ -45,5 +45,6 @@ fields:
     max: 
 pages:
 - cms/blog/creating-the-basic-building-stones-of-a-react-website.json
+- cms/blog/deneme.json
 - cms/blog/introduction-to-react-router.json
 - cms/blog/wonderful-first-day-in-react.json
