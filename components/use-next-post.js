@@ -6,14 +6,21 @@ export const useNextPost = (page, posts) => {
   const indexNumber = indexNumberPath.findIndex(
     (index) => index.content.id === page.id,
   );
-  const path = indexNumberPath[
-    indexNumber + 1 === indexLength ? indexNumber : indexNumber + 1
-  ].path.replace('blog', '');
+  const nextPageData =
+    indexNumberPath[indexNumber + 1 === indexLength ? indexNumber : indexNumber + 1];
+  const nextPageTitle = nextPageData.content.title;
+  const nextPagePath = nextPageData.path.replace('blog', '');
+  const nextPageId = nextPageData.content.id;
 
   return (
     <>
       {indexNumber + 1 === indexLength ? null : (
-        <Link href={`/posts${path}`}> Next Post </Link>
+        <>
+          <div>Next Page</div>
+          <Link key={nextPageId} href={`/posts${nextPagePath}`}>
+            {nextPageTitle}
+          </Link>
+        </>
       )}
     </>
   );

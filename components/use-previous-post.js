@@ -5,14 +5,22 @@ export const usePreviousPost = (page, posts) => {
   const indexNumber = indexNumberPath.findIndex(
     (index) => index.content.id === page.id,
   );
-  const path = indexNumberPath[
-    indexNumber - 1 === -1 ? indexNumber : indexNumber - 1
-  ].path.replace('blog', '');
+
+  const previousPageData =
+    indexNumberPath[indexNumber - 1 === -1 ? indexNumber : indexNumber - 1];
+  const previousPagePath = previousPageData.path.replace('blog', '');
+  const previousPageTitle = previousPageData.content.title;
+  const previousPageId = previousPageData.content.id;
 
   return (
     <>
       {indexNumber - 1 === -1 ? null : (
-        <Link href={`/posts${path}`}> Previous Post </Link>
+        <>
+          <div>Previous Page</div>
+          <Link key={previousPageId} href={`/posts${previousPagePath}`}>
+            {previousPageTitle}
+          </Link>
+        </>
       )}
     </>
   );

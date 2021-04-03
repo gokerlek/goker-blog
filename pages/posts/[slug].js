@@ -14,6 +14,7 @@ const BlogPost = ({ page, menu, footer, posts }) => {
   const previousPost = usePreviousPost(page, posts);
   const nextPost = useNextPost(page, posts);
   const readingMinutesText = useReadingMinutesFromBlocks(page.blocks);
+  console.log(posts);
 
   return (
     <Layout menu={menu.menuItems} footer={footer}>
