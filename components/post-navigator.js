@@ -1,4 +1,3 @@
-import { getPost, getSlugsOfPosts } from '../api/blog';
 import { getPosts } from '../api/blog';
 import { usePreviousPost } from './use-previous-post';
 import { useNextPost } from './use-next-post';
@@ -17,7 +16,6 @@ export const PostNavigator = ({ page, posts }) => {
           .post-navigator {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             color: #4b6584;
             font-weight: 600;
             margin: 2em 0;
@@ -34,19 +32,7 @@ export const PostNavigator = ({ page, posts }) => {
   );
 };
 
-export const getStaticProps = async ({ params: { slug } }) => {
-  const props = await getPost(slug);
+export const getStaticProps = async () => {
   const posts = await getPosts();
   return { props: { ...props, posts } };
 };
-
-export const getStaticPaths = async () => {
-  const pages = getSlugsOfPosts();
-
-  return {
-    paths: pages.map((page) => ({ params: { slug: page } })),
-    fallback: false,
-  };
-};
-
-export default PostNavigator;
