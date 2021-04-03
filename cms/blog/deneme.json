@@ -65,6 +65,12 @@
       "title": ""
     },
     {
+      "template": "image-block",
+      "image": "/images/ekran-goruntusu-2021-03-24-01-28-32.png",
+      "source": "goker-blog",
+      "title": ""
+    },
+    {
       "template": "code-block",
       "language": "javascript",
       "code": "import {Day1} from \"./day1\"\nexport const HomePage = () => {\n  return <div>\n  <Day1 />\n  </div>\n}\nimport {Link} from 'react-router-dom';\nimport {Code} from '../components/code/code'\nexport const Day1 = () => {\n  return <div className = \"day1\">\n  <p> \n  content\n  </p>\n  <Code> \n  some codes\n  </Code>\n  <Link to = \"/ day2\"> Click to see Day 2 </Link>\n  </div>;\n}",
