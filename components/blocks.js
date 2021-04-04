@@ -1,5 +1,6 @@
 import { Code } from './code';
 import { RichText } from './rich-text';
+import { PageImage } from './page-image';
 
 export const Blocks = ({ blocks }) => {
   return (
@@ -12,7 +13,7 @@ export const Blocks = ({ blocks }) => {
           ) : block.template === 'text-block' ? (
             <RichText>{block.content}</RichText>
           ) : block.template === 'image-block' ? (
-            <img src={block.image} />
+            <PageImage image={block.image} source={block.source} />
           ) : null}
         </div>
       ))}

@@ -15,7 +15,7 @@ const BlogPost = ({ page, menu, footer, posts }) => {
   return (
     <Layout menu={menu.menuItems} footer={footer}>
       <Banner banner={page.banner} />
-      <Container>
+      <Container small>
         <div key={page.key}>
           <PageHeader>{page.title}</PageHeader>
           <ReadingMinutes text={readingMinutesText} />
