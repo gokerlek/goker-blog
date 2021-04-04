@@ -2,7 +2,7 @@ export const PageImage = ({ image, source }) => {
   return (
     <div className="page-image">
       <img src={image} />
-      {`Source: ${source}`}
+      {source ? `Source: ${source}` : null}
 
       <style jsx>{`
         .page-image {
