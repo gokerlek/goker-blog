@@ -8,10 +8,12 @@ import { useReadingMinutesFromBlocks } from '../../components/use-reading-minute
 import { ReadingMinutes } from '../../components/reading-minutes';
 import { getPosts } from '../../api/blog';
 import { PostNavigator } from '../../components/post-navigator';
+import { PublishDate } from '../../components/publish-date';
+import { usePublishDate } from '../../components/usePublishDate';
 
 const BlogPost = ({ page, menu, footer, posts }) => {
   const readingMinutesText = useReadingMinutesFromBlocks(page.blocks);
-
+  const publishDate = usePublishDate(page);
   return (
     <Layout menu={menu.menuItems} footer={footer}>
       <Banner banner={page.banner} />
@@ -19,7 +21,7 @@ const BlogPost = ({ page, menu, footer, posts }) => {
         <div key={page.key}>
           <PageHeader>{page.title}</PageHeader>
           <ReadingMinutes text={readingMinutesText} />
-          <div>{page.publish_date}</div>
+          <PublishDate time={publishDate} />
           <Blocks blocks={page.blocks} />
           <PostNavigator page={page} posts={posts} />
         </div>
