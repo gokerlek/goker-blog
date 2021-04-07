@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Footer } from './footer';
 import { Header } from './header';
+import { ScrollToTop } from './scroll-to-top';
 
 export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
   return (
@@ -13,6 +14,7 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
         <Header menu={menu} />
         <div>{children}</div>
         <Footer footer={footer} />
+        <ScrollToTop />
         <style jsx>{`
           .layout {
             padding-top: 80px;
