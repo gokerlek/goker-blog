@@ -2,7 +2,7 @@ import { FiTriangle } from 'react-icons/fi';
 import { IconContext } from 'react-icons';
 
 const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window?.scrollTo({ top: 0, behavior: 'smooth' });
 };
 export const TopButton = () => {
   return (
