@@ -29,7 +29,7 @@ export const TopButton = () => {
           position: fixed;
           top: 85vh;
           right: 5vw;
-          color: #2d98da;
+          color: #4b6584;
           border: none;
           background: none;
         }
