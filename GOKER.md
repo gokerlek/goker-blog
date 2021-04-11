@@ -28,3 +28,21 @@ npm run dev
 # or
 yarn dev
 ```
+
+## You can start now :)
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+## Data Management With Forestry.io
+
+You should use a [forestry.io](https://forestry.io/) application that automatically generates a "JSON" file for project data.
+
+You must map forestry.io to your git repository. [Check out](https://forestry.io/docs/git-sync/) for more information.
+
+You can add and edit site data. For example, if you want to add a new page to the site, you will do it here. Likewise, if you want to add any content you will use "forestry.io".
