@@ -1,4 +1,5 @@
-#WELCOME MY PERSONAL WEBPAGE
+# WELCOME MY PERSONAL WEBPAGE
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First of all, if [nvm](https://github.com/nvm-sh/nvm) node.js and [npm](https://www.npmjs.com/get-npm) are not installed, please install it.
@@ -40,7 +41,7 @@ The site basically consists of three parts. These are the layout, header, and fo
 1. **Layout:** Contains the content of the pages. The basic structure of the pages is determined here.There are a header, a children structure, and a footer in the layout. Any item can be included in the [children structure](https://nextjs.org/docs/api-reference/next/router).
 2. **Header:** Contains menu and logo elements.
    1. **Logo:** it is embedded in the page does not receive external data. If you want to make changes on the logo, you should examine the logo.js component.
-   2. **Menu:**You can switch between pages with the menu. If you want a new menu tab, just add it with forestry.io.
+   2. **Menu:** You can switch between pages with the menu. If you want a new menu tab, just add it with forestry.io.
 3. **Footer:** Includes brief information about me and my social media links.
 
 There are five types of pages on the site.
