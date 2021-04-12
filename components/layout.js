@@ -3,7 +3,7 @@ import { Footer } from './footer';
 import { Header } from './header';
 import { ScrollToTop } from './scroll-to-top';
 
-export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
+export const Layout = ({ children, title = 'Göker Zafer', menu, footer }) => {
   return (
     <>
       <Head>
