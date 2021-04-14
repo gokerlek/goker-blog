@@ -1,5 +1,3 @@
-import { FaStopwatch } from 'react-icons/fa';
-
 export const PublishDate = ({ time }) => {
   return (
     <div className="publish-date">
