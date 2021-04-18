@@ -1,27 +1,32 @@
 // <lastmod>${latestPost}</lastmod>
 
 // pages/sitemap.xml.js
-import React from 'react';
 import { API } from '../api/api';
 
-const createSitemap = (posts = []) => `<?xml version="1.0" encoding="UTF-8"?>
+const createSitemap = (
+  pages = [],
+  posts = [],
+) => `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://www.gokerzafer.com/</loc>
       </url>
       ${`
            
-      ${posts.menu.menuItems.link
+      ${posts.menu.menuItems
         .map(
           (page) => `<url>
-        <loc>https://www.gokerzafer.com/${page}</loc>
+        <loc>https://www.gokerzafer.com/${page.link}</loc>
       </url>`,
         )
         .join('')}
-      ${posts.page.list.path
+      ${posts.page.list
         .map(
           (post) => `<url>
-        <loc>https://www.gokerzafer.com/${post.replace('blog/', 'post/')}</loc>
+        <loc>https://www.gokerzafer.com/${post.path.pathreplace(
+          'blog/',
+          'post/',
+        )}</loc>
       </url>`,
         )
         .join('')}
@@ -35,7 +40,8 @@ export default Sitemap;
 export const getServerSideProps = ({ res }) => {
   res.setHeader('Content-Type', 'text/xml');
   const posts = API.getList('blog');
-  res.write(createSitemap(posts));
+  const pages = API.getList('pages');
+  res.write(createSitemap(posts, pages));
   res.end();
   return { props: {} };
 };
