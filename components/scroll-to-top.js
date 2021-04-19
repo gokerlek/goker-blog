@@ -10,7 +10,7 @@ export const ScrollToTop = () => {
 
   useLayoutEffect(() => {
     window?.addEventListener('scroll', toggleVisibility);
-  });
+  }, []);
 
   return <>{isVisible && <TopButton />}</>;
 };
