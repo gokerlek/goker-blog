@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { Container } from './container';
 import { Logo } from './logo';
+import { Menu } from './menu';
 
 export const Header = ({ menu }) => {
   return (
@@ -8,13 +8,7 @@ export const Header = ({ menu }) => {
       <Container>
         <div className="navbar">
           <Logo small />
-          <div className="menu">
-            {menu.map((menuItem) => (
-              <Link key={menuItem.id} href={menuItem.link}>
-                {menuItem.label}
-              </Link>
-            ))}
-          </div>
+          <Menu menu={menu} />
         </div>
       </Container>
 
@@ -30,17 +24,14 @@ export const Header = ({ menu }) => {
             width: 100vw;
             z-index: 100;
           }
+
           .navbar {
             display: flex;
             height: 80px;
             align-items: center;
             justify-content: space-between;
           }
-          .menu {
-            display: flex;
-            justify-content: center;
-            width: 900px;
-          }
+
           .header :global(a) {
             margin: 20px;
             color: #4b6584;
@@ -48,6 +39,15 @@ export const Header = ({ menu }) => {
           .header :global(a):hover,
           .header :global(a).active {
             color: #009fb7;
+          }
+          @media screen and (max-width: 490px) {
+            .header :global(a) {
+              margin: 20px;
+              color: white;
+            }
+            .header :global(a):hover {
+              color: black;
+            }
           }
         `}
       </style>
