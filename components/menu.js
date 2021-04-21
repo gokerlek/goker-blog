@@ -47,7 +47,6 @@ export const Menu = ({ menu }) => {
               width: 100%;
               flex-direction: column;
               align-items: center;
-              display: ${toggle ? 'flex' : 'none'};
             }
             :global(.menu a) {
               margin: 20px;
@@ -62,6 +61,9 @@ export const Menu = ({ menu }) => {
           @media screen and (min-width: 490px) {
             .plus {
               display: none;
+            }
+            .menu {
+              display: ${toggle ? 'flex' : 'none'};
             }
           }
         `}
