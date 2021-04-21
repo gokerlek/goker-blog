@@ -4,9 +4,7 @@ import { useState } from 'react';
 
 export const Menu = ({ menu }) => {
   const [toggle, setToggle] = useState(false);
-  const toggler = () => {
-    toggle ? setToggle(false) : setToggle(true);
-  };
+  const toggler = () => setToggle(!toggle);
   return (
     <>
       <div className="menu">
@@ -28,8 +26,14 @@ export const Menu = ({ menu }) => {
             cursor: pointer;
           }
           .plus {
-            color: ${toggle ? 'white' : '#4b6584'};
             z-index: 500;
+          }
+          :global(.menu a) {
+            margin: 20px;
+            color: #4b6584;
+          }
+          :global(.menu a.active) :global(.menu a:hover) {
+            color: #009fb7;
           }
 
           @media screen and (max-width: 490px) {
@@ -39,15 +43,36 @@ export const Menu = ({ menu }) => {
               right: 0;
               background: #4b6584;
               color: white;
-              height: 50vh;
-              width: 50%;
+              height: 100vh;
+              width: 100%;
               flex-direction: column;
               display: ${toggle ? 'flex' : 'none'};
+            }
+            :global(.menu a) {
+              margin: 20px;
+              color: white;
+            }
+            :global(.menu a.active) :global(.menu a:hover) {
+              color: black;
             }
           }
           @media screen and (min-width: 490px) {
             .plus {
               display: none;
+            }
+          }
+        `}
+      </style>
+
+      <style jsx>
+        {`
+          .plus {
+            color: ${toggle ? 'white' : '#4b6584'};
+          }
+
+          @media screen and (max-width: 490px) {
+            .menu {
+              display: ${toggle ? 'flex' : 'none'};
             }
           }
         `}

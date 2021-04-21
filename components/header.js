@@ -31,24 +31,6 @@ export const Header = ({ menu }) => {
             align-items: center;
             justify-content: space-between;
           }
-
-          .header :global(a) {
-            margin: 20px;
-            color: #4b6584;
-          }
-          .header :global(a):hover,
-          .header :global(a).active {
-            color: #009fb7;
-          }
-          @media screen and (max-width: 490px) {
-            .header :global(a) {
-              margin: 20px;
-              color: white;
-            }
-            .header :global(a):hover {
-              color: black;
-            }
-          }
         `}
       </style>
     </div>
