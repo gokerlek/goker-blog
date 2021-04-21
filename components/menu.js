@@ -46,11 +46,14 @@ export const Menu = ({ menu }) => {
               height: 100vh;
               width: 100%;
               flex-direction: column;
+              align-items: center;
               display: ${toggle ? 'flex' : 'none'};
             }
             :global(.menu a) {
               margin: 20px;
               color: white;
+              font-size: 1.5em;
+              font-weight: 600;
             }
             :global(.menu a.active) :global(.menu a:hover) {
               color: black;
