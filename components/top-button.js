@@ -32,6 +32,7 @@ export const TopButton = () => {
           color: #4b6584;
           border: none;
           background: none;
+          cursor: pointer;
         }
         .top-button:hover {
           color: #292929;
