@@ -24,6 +24,11 @@ export const Banner = ({ banner, size }) => {
           height: ${getBannerSize()}em;
           object-fit: cover;
         }
+        @media screen and (max-width: 490px) {
+          img {
+            height: ${getBannerSize() / 1.4}em;
+          }
+        }
       `}</style>
     </>
   );

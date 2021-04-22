@@ -17,7 +17,7 @@ export const Code = ({ children, language = 'javascript' }) => {
       <style jsx>{`
         .goker {
           overflow-x: auto;
-          max-width: 85vw;
+          max-width: 80vw;
         }
       `}</style>
     </div>

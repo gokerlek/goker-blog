@@ -10,6 +10,12 @@ export const PageHeader = ({ children }) => {
           color: #4b6584;
           margin: 0.7em 0 0.4em;
         }
+
+        @media screen and (max-width: 490px) {
+          h1 {
+            font-size: 2em;
+          }
+        }
       `}</style>
     </>
   );

@@ -62,9 +62,6 @@ export const Menu = ({ menu }) => {
             .plus {
               display: none;
             }
-            .menu {
-              display: ${toggle ? 'flex' : 'none'};
-            }
           }
         `}
       </style>

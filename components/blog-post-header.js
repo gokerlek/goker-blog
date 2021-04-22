@@ -13,6 +13,18 @@ export const BlogPostHeader = ({ header, banner }) => {
           margin: 0.5em 0.5em;
           line-height: 1.2em;
         }
+        @media screen and (max-width: 670px) {
+          .blog-post-header {
+            font-size: 3em;
+            line-height: 1em;
+          }
+        }
+        @media screen and (max-width: 490px) {
+          .blog-post-header {
+            font-size: 2.1em;
+            line-height: 1em;
+          }
+        }
       `}</style>
     </div>
   );
