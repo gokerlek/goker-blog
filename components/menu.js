@@ -1,17 +1,24 @@
 import Link from 'next/link';
 import { FaPlus, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export const Menu = ({ menu }) => {
+  const router = useRouter();
   const [toggle, setToggle] = useState(false);
   const toggler = () => setToggle(!toggle);
   return (
     <>
       <div className="menu">
         {menu.map((menuItem) => (
-          <Link key={menuItem.id} href={menuItem.link}>
-            {menuItem.label}
-          </Link>
+          <div
+            className={
+              router.pathname === menuItem.link ? 'menu-item active' : 'menu-item'
+            }>
+            <Link key={menuItem.id} href={menuItem.link}>
+              {menuItem.label}
+            </Link>
+          </div>
         ))}
       </div>
       <div className="plus" onClick={toggler}>
@@ -25,13 +32,16 @@ export const Menu = ({ menu }) => {
             width: 900px;
             cursor: pointer;
           }
+
           .plus {
             z-index: 500;
           }
+
           :global(.menu a) {
             margin: 20px;
             color: #4b6584;
           }
+
           :global(.menu a.active) :global(.menu a:hover) {
             color: #009fb7;
           }
@@ -48,16 +58,19 @@ export const Menu = ({ menu }) => {
               flex-direction: column;
               align-items: center;
             }
+
             :global(.menu a) {
               margin: 20px;
               color: white;
               font-size: 1.5em;
               font-weight: 600;
             }
+
             :global(.menu a.active) :global(.menu a:hover) {
               color: black;
             }
           }
+
           @media screen and (min-width: 490px) {
             .plus {
               display: none;
