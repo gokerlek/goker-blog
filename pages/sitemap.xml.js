@@ -13,20 +13,17 @@ const createSitemap = (
       </url>
       ${`
            
-      ${posts.menu.menuItems
+      ${pages
         .map(
           (page) => `<url>
-        <loc>https://www.gokerzafer.com/${page.link}</loc>
+        <loc>https://www.gokerzafer.com/${page}</loc>
       </url>`,
         )
         .join('')}
-      ${posts.page.list
+      ${posts
         .map(
-          (post) => `<url>
-        <loc>https://www.gokerzafer.com/${post.path.pathreplace(
-          'blog/',
-          'post/',
-        )}</loc>
+          (postPath) => `<url>
+        <loc>https://www.gokerzafer.com/${postPath.replace('blog/', 'post/')}</loc>
       </url>`,
         )
         .join('')}
@@ -41,6 +38,7 @@ export const getServerSideProps = ({ res }) => {
   res.setHeader('Content-Type', 'text/xml');
   const posts = API.getList('blog');
   const pages = API.getList('pages');
+  console.log(posts);
   res.write(createSitemap(posts, pages));
   res.end();
   return { props: {} };
