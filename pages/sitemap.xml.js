@@ -3,16 +3,18 @@
 // pages/sitemap.xml.js
 import { API } from '../api/api';
 
-const createSitemap = (
-  pages = [],
-  posts = [],
-) => `<?xml version="1.0" encoding="UTF-8"?>
+const createSitemap = (pages = [], posts = []) => {
+  return `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://www.gokerzafer.com/</loc>
       </url>
-      ${`
-           
+      <url>
+        <loc>https://www.gokerzafer.com/blog</loc>
+      </url>
+      <url>
+        <loc>https://www.gokerzafer.com/projects</loc>
+      </url>
       ${pages
         .map(
           (page) => `<url>
@@ -27,8 +29,8 @@ const createSitemap = (
       </url>`,
         )
         .join('')}
-      `}
     </urlset>`;
+};
 
 const Sitemap = () => null;
 
@@ -38,7 +40,6 @@ export const getServerSideProps = ({ res }) => {
   res.setHeader('Content-Type', 'text/xml');
   const posts = API.getList('blog');
   const pages = API.getList('pages');
-  console.log(posts);
   res.write(createSitemap(posts, pages));
   res.end();
   return { props: {} };
