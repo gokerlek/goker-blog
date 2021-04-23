@@ -13,7 +13,7 @@ import { usePublishDate } from '../../components/usePublishDate';
 
 const BlogPost = ({ page, menu, footer, posts }) => {
   const readingMinutesText = useReadingMinutesFromBlocks(page.blocks);
-  const publishDate = usePublishDate(page);
+  const publishDate = page.publish_date ? usePublishDate(page.publish_date) : null;
   return (
     <Layout menu={menu.menuItems} footer={footer}>
       <Banner banner={page.banner} />
@@ -21,7 +21,7 @@ const BlogPost = ({ page, menu, footer, posts }) => {
         <div key={page.key}>
           <PageHeader>{page.title}</PageHeader>
           <ReadingMinutes text={readingMinutesText} />
-          <PublishDate time={publishDate} />
+          {publishDate ? <PublishDate time={publishDate} /> : null}
           <Blocks blocks={page.blocks} />
           <PostNavigator page={page} posts={posts} />
         </div>
