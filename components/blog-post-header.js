@@ -12,6 +12,7 @@ export const BlogPostHeader = ({ header, banner }) => {
           font-weight: 800;
           margin: 0.5em 0.5em;
           line-height: 1.2em;
+          z-index: 20;
         }
       `}</style>
     </div>
