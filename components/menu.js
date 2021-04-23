@@ -13,7 +13,7 @@ export const Menu = ({ menu }) => {
         {menu.map((menuItem) => (
           <div
             className={
-              router.pathname === menuItem.link ? 'menu-item active' : 'menu-item'
+              router.pathname === menuItem.link ? 'menu-item-active' : 'menu-item'
             }>
             <Link key={menuItem.id} href={menuItem.link}>
               {menuItem.label}
@@ -39,11 +39,15 @@ export const Menu = ({ menu }) => {
 
           :global(.menu a) {
             margin: 20px;
-            color: #4b6584;
           }
 
-          :global(.menu a.active) :global(.menu a:hover) {
+          :global(.menu-item-active a),
+          :global(.menu a:hover) {
             color: #009fb7;
+          }
+
+          :global(.menu-item a) {
+            color: #4b6584;
           }
 
           @media screen and (max-width: 490px) {
@@ -64,10 +68,15 @@ export const Menu = ({ menu }) => {
               color: white;
               font-size: 1.5em;
               font-weight: 600;
+              padding: 30px;
             }
 
-            :global(.menu a.active) :global(.menu a:hover) {
+            :global(.menu a:hover) {
               color: black;
+            }
+            .menu-item-active,
+            .menu-item {
+              margin: 20px;
             }
           }
 
