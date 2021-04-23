@@ -7,13 +7,14 @@ export const Menu = ({ menu }) => {
   const router = useRouter();
   const [toggle, setToggle] = useState(false);
   const toggler = () => setToggle(!toggle);
+
   return (
     <>
       <div className="menu">
         {menu.map((menuItem) => (
           <div
             className={
-              router.pathname === menuItem.link ? 'menu-item-active' : 'menu-item'
+              router.asPath === menuItem.link ? 'menu-item-active' : 'menu-item'
             }>
             <Link key={menuItem.id} href={menuItem.link}>
               {menuItem.label}
