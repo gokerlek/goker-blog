@@ -8,7 +8,7 @@ export const Label = ({ children }) => {
           display: inline-block;
           margin: 0.5em 0 1.4em 1em;
           color: white;
-          padding: 0.5em 0.5em 0.5em 1em;
+          padding: 0.5em 1em;
           border-radius: 4px;
           background-color: #0fb9b1;
           font-weight: 300;

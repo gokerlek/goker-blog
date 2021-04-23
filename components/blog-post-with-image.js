@@ -29,6 +29,7 @@ export const BlogPostWithImage = ({
           margin: 2em 0;
           overflow: hidden;
           background-color: white;
+          cursor: pointer;
         }
 
         .image-text-sum-wrapper :global(p) {

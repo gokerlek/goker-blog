@@ -9,6 +9,7 @@ export const RichText = ({ children }) => {
         {`
           .rich-text :global(p) {
             line-height: 1.5em;
+          }
         `}
       </style>
     </div>

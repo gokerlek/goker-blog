@@ -46,7 +46,7 @@ export const Footer = ({ footer }) => {
           }
 
           .footer :global(p) {
-            line-height: 0.8em;
+            line-height: 1.1em;
           }
         `}
       </style>

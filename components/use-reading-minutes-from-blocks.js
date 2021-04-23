@@ -9,6 +9,8 @@ export const useReadingMinutesFromBlocks = (blocks) => {
   const readingTimeText =
     readingMinutes < 1
       ? `${Math.floor(readingMinutes * 60)} seconds read.`
+      : Math.floor(readingMinutes) === 1
+      ? `${Math.floor(readingMinutes)} minute read.`
       : `${Math.floor(readingMinutes)} minutes read.`;
   return readingTimeText;
 };
