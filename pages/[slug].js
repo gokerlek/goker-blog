@@ -1,11 +1,17 @@
 import { Layout } from '../components/layout';
 import { Container } from '../components/container';
 import { getPage, getSlugsOfPages } from '../api/pages';
+import { Blocks } from '../components/blocks';
+import { PageHeader } from '../components/page-header';
 
 const Page = ({ page, menu, footer }) => {
   return (
     <Layout menu={menu.menuItems} footer={footer}>
-      <Container>Page</Container>
+      <Container>
+        {page.banner ? <img src={page.banner} /> : null}
+        <PageHeader>{page.title}</PageHeader>
+        <Blocks blocks={page.blocks} />
+      </Container>
     </Layout>
   );
 };

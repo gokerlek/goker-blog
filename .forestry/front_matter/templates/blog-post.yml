@@ -44,4 +44,6 @@ fields:
     min: 
     max: 
 pages:
-- cms/blog/test.json
+- cms/blog/creating-the-basic-building-stones-of-a-react-website.json
+- cms/blog/introduction-to-react-router.json
+- cms/blog/wonderful-first-day-in-react.json

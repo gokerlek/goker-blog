@@ -4,7 +4,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { Container } from './container';
-import ReactMarkdown from 'react-markdown';
+import { RichText } from './rich-text';
+import { Logo } from './logo';
+import { Copyright } from './copyright';
 
 const getIcon = (icons) => {
   switch (icons) {
@@ -22,9 +24,9 @@ const getIcon = (icons) => {
 export const Footer = ({ footer }) => {
   return (
     <div className="footer">
-      <Container width="960px" marg="0">
-        <h3>Göker ZAFER</h3>
-        <ReactMarkdown>{footer.shortBio}</ReactMarkdown>
+      <Container>
+        <Logo hasName />
+        <RichText>{footer.shortBio}</RichText>
         {footer.socialLinks.map((socialLink) => (
           <IconWithLink
             key={socialLink.id}
@@ -33,28 +35,18 @@ export const Footer = ({ footer }) => {
             color={socialLink.color}
           />
         ))}
-        <h5>{footer.copyright}</h5>
+        <Copyright>{footer.copyright}</Copyright>
       </Container>
+
       <style jsx>
         {`
           .footer {
             background-color: #d1d8e0;
-            padding-top: 5em;
+            padding-top: 2.5em;
           }
-          ,
+
           .footer :global(p) {
-            margin: 0;
-            font-weight: 300;
-          }
-          h3 {
-            font-weight: 800;
-            margin-bottom: 1em;
-          }
-          h5 {
-            font-weight: 300;
-            color: #a5b1c2;
-            text-align: center;
-            margin-top: 3.8em;
+            line-height: 1.1em;
           }
         `}
       </style>

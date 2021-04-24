@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { Footer } from './footer';
 import { Header } from './header';
+import { ScrollToTop } from './scroll-to-top';
 
-export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
+export const Layout = ({ children, title = 'Göker Zafer', menu, footer }) => {
   return (
     <>
       <Head>
@@ -11,30 +12,18 @@ export const Layout = ({ children, title = 'Goker Blog', menu, footer }) => {
       </Head>
       <div className="layout">
         <Header menu={menu} />
-        <div> {children} </div>
+        <div>{children}</div>
         <Footer footer={footer} />
-        <style jsx global>{`
-          p {
-            color: #292929;
-          }
-
-          #root {
-            background-color: #f5f5f5;
-          }
-
-          h1,
-          h2,
-          h3 {
-            color: #292929;
-          }
-        `}</style>
+        <ScrollToTop />
         <style jsx>{`
           .layout {
+            padding-top: 80px;
             display: grid;
-            grid-template-rows: 80px minmax(calc(100vh - 80px), max-content) minmax(
+            grid-template-rows: minmax(calc(100vh - 80px), max-content) minmax(
                 330px,
                 max-content
               );
+            background-color: #ffffff;
           }
         `}</style>
       </div>

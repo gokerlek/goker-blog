@@ -1,35 +1,56 @@
-import Link from 'next/link';
-export const ProjectContent = ({ title, usedTechnology, summery, projectlink }) => {
+import { RichText } from './rich-text';
+import { Banner, BannerSize } from './banner';
+import { Label } from './label';
+
+export const ProjectContent = ({
+  projects: { title, thumbnail, description, projectLink, technologies },
+}) => {
   return (
-    <div className="project-content">
-      <h3>{title}</h3>
-      <h6>{usedTechnology}</h6>
-      <p>{summery}</p>
-      <Link href={projectlink}>Click for more</Link>
-      <style>{`
-            .project-content{
-                display:flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-evenly;
-                margin: 1.5em auto;
-                padding: 1.5em 0.7em;
-                width: 50%;
-                border-radius: 1em;
-                background-color: #f5f5f5;
-                box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.32);
-            }
-            .project-content > h6,h3,p,a {
-                margin:  0.1em 0;
-                color: #292929;
-            }
-            .project-content a {
-                text-decoration: none;
-                color: #009FB7;
-                font-size: 1em;
-                font-weight: 800;
-            }
-        `}</style>
+    <div className="blog-post-with-image">
+      <div className="image-text-sum-wrapper">
+        {thumbnail ? <Banner size={BannerSize.XSMALL} banner={thumbnail} /> : null}
+        <div className="text-wrapper">{title}</div>
+        {description ? <RichText small>{description}</RichText> : null}
+        <div className="label-container">
+          {technologies.map((technology) => (
+            <Label>{technology}</Label>
+          ))}
+        </div>
+      </div>
+      <style jsx>{`
+        .blog-post-with-image {
+          max-width: 460px;
+        }
+
+        .label-container {
+          margin-left: 1.3em;
+        }
+
+        .image-text-sum-wrapper {
+          border-radius: 10px;
+          box-shadow: 3px 0px 30px 0px rgba(0, 0, 0, 0.15);
+          min-height: 400px;
+          margin: 2em 0;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background-color: white;
+        }
+
+        .image-text-sum-wrapper :global(p) {
+          margin: 1.5em 2em;
+        }
+
+        .text-wrapper {
+          font-size: 2.5em;
+          margin-top: 0.4em;
+          font-weight: 600;
+          line-height: 1.2em;
+          text-align: center;
+          color: #4b6584;
+        }
+      `}</style>
     </div>
   );
 };
