@@ -1,0 +1,30 @@
+{
+  "title": "Working With Component",
+  "publish_date": "2021-03-21T21:00:00Z",
+  "banner": "",
+  "summary": "We will see how easy and convenient it is to work with components. Components are the key to a modular and clean code site.",
+  "blocks": [
+    {
+      "template": "text-block",
+      "content": "We will use the component structure to simplify the site codes and not write the same code blocks repeatedly. Thus, the site will have a modular structure. For example, we will use the Layout structure on each page. It will contain Header, page content, and Footer. What changes on each page will be the page content. Like Layout, they will be found in Layout as Footer and Header components. If this is not the case, we will write code blocks such as Footer Header for each page. When a small change is needed, we have to go into each page and make the changes one by one. This causes a lot of waste of time and causes a lot of mistakes. Below is the Layout component I created and its use on the Blog page.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "title": "",
+      "code": ""
+    },
+    {
+      "template": "text-block",
+      "title": "",
+      "content": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "title": "",
+      "code": ""
+    }
+  ]
+}
