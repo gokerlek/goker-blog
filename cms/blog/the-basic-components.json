@@ -1,0 +1,41 @@
+{
+  "title": "The Basic Components",
+  "publish_date": "",
+  "banner": "/images/fabrice-villard-du41jiai5ww-unsplash.jpg",
+  "summary": "The basic components are the container, the layout, the header, and the footer.  We start with these components.",
+  "blocks": [
+    {
+      "template": "text-block",
+      "content": "The basic components are the container, the layout, the header, and the footer.\n\nThe container component is so simple and useful. I use the container component in the layout,  the header, the footer, and pages for fitting the dimensions of the content. Max-width values are 720px or 960px for these components. I use the [conditional (ternary) operator ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)for different values.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "code": "export const Container = ({ children, small = false }) => {\n  return (\n    <div className=\"container\">\n      {children}\n      <style jsx>{`\n        .container {\n          margin: 0 auto;\n          padding: 0 2em;\n          max-width: ${small ? 720 : 960}px;\n        }\n      `}</style>\n    </div>\n  );\n};",
+      "title": ""
+    },
+    {
+      "template": "text-block",
+      "content": "The layout component is the main structure of pages. it includes the header component, children structure, and the footer component.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "code": "import Head from 'next/head';\nimport { Footer } from './footer';\nimport { Header } from './header';\nimport { ScrollToTop } from './scroll-to-top';\n\nexport const Layout = ({ children, title = 'Göker Zafer', menu, footer }) => {\n  return (\n    <>\n      <Head>\n        <title>{title}</title>\n        <link rel=\"icon\" href=\"/favicon.ico\" />\n      </Head>\n      <div className=\"layout\">\n        <Header menu={menu} />\n        <div>{children}</div>\n        <Footer footer={footer} />\n        <ScrollToTop />\n        <style jsx>{`\n          .layout {\n            padding-top: 80px;\n            display: grid;\n            grid-template-rows: minmax(calc(100vh - 80px), max-content) minmax(\n                330px,\n                max-content\n              );\n            background-color: #ffffff;\n          }\n        `}</style>\n      </div>\n    </>\n  );\n};",
+      "title": ""
+    },
+    {
+      "template": "text-block",
+      "content": "The Header component must include the logo component and the menu component. these components are in the container component. The logo component includes a logo image and the image is scalable. The menu component includes menu items and links for every page.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "code": "import { Container } from './container';\nimport { Logo } from './logo';\nimport { Menu } from './menu';\n\nexport const Header = ({ menu }) => {\n  return (\n    <div className=\"header\">\n      <Container>\n        <div className=\"navbar\">\n          <Logo small />\n          <Menu menu={menu} />\n        </div>\n      </Container>\n\n      <style jsx>\n        {`\n          .header {\n            background-color: white;\n            box-shadow: 0px 0px 96px rgba(0, 0, 0, 0.07),\n              0px 0px 12.0207px rgba(0, 0, 0, 0.035);\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100vw;\n            z-index: 100;\n          }\n\n          .navbar {\n            display: flex;\n            height: 80px;\n            align-items: center;\n            justify-content: space-between;\n          }\n        `}\n      </style>\n    </div>\n  );\n};",
+      "title": ""
+    }
+  ]
+}
