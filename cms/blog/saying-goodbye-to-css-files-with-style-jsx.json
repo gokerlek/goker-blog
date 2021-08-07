@@ -1,0 +1,30 @@
+{
+  "title": "Saying Goodbye to CSS Files With <style jsx>",
+  "publish_date": "",
+  "banner": "/images/guillaume-de-germain-h1itwfweqm4-unsplash.jpg",
+  "summary": "It's time to get rid of excess and be free. I'm starting to use the <style jsx>. Goodbye CSS  files. I don't miss you.",
+  "blocks": [
+    {
+      "template": "text-block",
+      "content": "I used to use the CSS file for every js file. I become to using syle jsx and 50% savings on the number of files. This way js files will be more isolated and unaffected by changes in other files. Style jsx rules like CSS but it has a few differences.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "code": "function Home() {\n  return (\n    <div className=\"container\">\n      <h1>Hello Next.js</h1>\n      <p>Let's explore different ways to style Next.js apps</p>\n      <style jsx>{`\n        .container {\n          margin: 50px;\n        }\n        p {\n          color: blue;\n        }\n      `}</style>\n    </div>\n  )\n}\n\nexport default Home",
+      "title": ""
+    },
+    {
+      "template": "text-block",
+      "content": "Conditional styling is very easy. If I want to change the class name conditionally, I just need to use the ternary operator.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "code": "export const Container = ({ children, small = false }) => {\n  return (\n    <div className=\"container\">\n      {children}\n      <style jsx>{`\n        .container {\n          margin: 0 auto;\n          padding: 0 2em;\n          max-width: ${small ? 720 : 960}px;\n        }\n      `}</style>\n    </div>\n  );\n};",
+      "title": ""
+    }
+  ]
+}
