@@ -36,6 +36,17 @@
       "language": "javascript",
       "code": "import { Container } from './container';\nimport { Logo } from './logo';\nimport { Menu } from './menu';\n\nexport const Header = ({ menu }) => {\n  return (\n    <div className=\"header\">\n      <Container>\n        <div className=\"navbar\">\n          <Logo small />\n          <Menu menu={menu} />\n        </div>\n      </Container>\n\n      <style jsx>\n        {`\n          .header {\n            background-color: white;\n            box-shadow: 0px 0px 96px rgba(0, 0, 0, 0.07),\n              0px 0px 12.0207px rgba(0, 0, 0, 0.035);\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100vw;\n            z-index: 100;\n          }\n\n          .navbar {\n            display: flex;\n            height: 80px;\n            align-items: center;\n            justify-content: space-between;\n          }\n        `}\n      </style>\n    </div>\n  );\n};",
       "title": ""
+    },
+    {
+      "template": "text-block",
+      "content": "The Footer component must include the logo component, my short biography, my social media links, and the copyright component. These elements are in the container component.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "code": "import { IconWithLink } from './icon-with-link';\nimport { FaLinkedinIn } from 'react-icons/fa';\nimport { FaGithub } from 'react-icons/fa';\nimport { FaTwitter } from 'react-icons/fa';\nimport { FaInstagram } from 'react-icons/fa';\nimport { Container } from './container';\nimport { RichText } from './rich-text';\nimport { Logo } from './logo';\nimport { Copyright } from './copyright';\n\nconst getIcon = (icons) => {\n  switch (icons) {\n    case 'twitter':\n      return FaTwitter;\n    case 'github':\n      return FaGithub;\n    case 'instagram':\n      return FaInstagram;\n    case 'linkedin':\n      return FaLinkedinIn;\n  }\n};\n\nexport const Footer = ({ footer }) => {\n  return (\n    <div className=\"footer\">\n      <Container>\n        <Logo hasName />\n        <RichText>{footer.shortBio}</RichText>\n        {footer.socialLinks.map((socialLink) => (\n          <IconWithLink\n            key={socialLink.id}\n            link={socialLink.link}\n            icon={getIcon(socialLink.icon)}\n            color={socialLink.color}\n          />\n        ))}\n        <Copyright>{footer.copyright}</Copyright>\n      </Container>\n\n      <style jsx>\n        {`\n          .footer {\n            background-color: #d1d8e0;\n            padding-top: 2.5em;\n          }\n\n          .footer :global(p) {\n            line-height: 1.1em;\n          }\n        `}\n      </style>\n    </div>\n  );\n};",
+      "title": ""
     }
   ]
 }
