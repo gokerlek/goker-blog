@@ -47,3 +47,4 @@ fields:
   label: Galery
 pages:
 - cms/projects/goker-blog.json
+- cms/projects/music-education-app.json
