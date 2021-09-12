@@ -46,5 +46,6 @@ fields:
   config: {}
   label: Galery
 pages:
+- cms/projects/e-commercial.json
 - cms/projects/goker-blog.json
 - cms/projects/music-education-app.json
