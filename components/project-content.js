@@ -13,13 +13,13 @@ export const ProjectContent = ({
         {description ? <RichText small>{description}</RichText> : null}
         <div className="label-container">
           {technologies.map((technology) => (
-            <Label>{technology}</Label>
+            <Label key={technology}>{technology}</Label>
           ))}
         </div>
       </div>
       <style jsx>{`
         .blog-post-with-image {
-          max-width: 460px;
+          margin: 1em 0;
         }
 
         .label-container {

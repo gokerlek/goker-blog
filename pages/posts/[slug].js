@@ -12,6 +12,7 @@ import { PublishDate } from '../../components/publish-date';
 import { usePublishDate } from '../../components/usePublishDate';
 
 const BlogPost = ({ page, menu, footer, posts }) => {
+  console.log(page);
   const readingMinutesText = useReadingMinutesFromBlocks(page.blocks);
   const publishDate = page.publish_date ? usePublishDate(page.publish_date) : null;
   return (

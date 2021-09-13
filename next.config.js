@@ -2,6 +2,9 @@ const glob = require('glob');
 
 module.exports = {
   target: 'serverless',
+  images: {
+    disableStaticImages: true,
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.html|\.svg$/,
