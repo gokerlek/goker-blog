@@ -1,0 +1,35 @@
+{
+  "title": "Working With React Component",
+  "publish_date": "2021-03-21T21:00:00Z",
+  "banner": "/images/robin-glauser-zp7x_b86xog-unsplash.jpg",
+  "summary": "We will see how easy and convenient it is to work with components. Components are the key to a modular and clean code site.",
+  "blocks": [
+    {
+      "template": "text-block",
+      "content": "We will use the component structure to simplify the site codes and not write the same code blocks repeatedly. Thus, the site will have a modular structure. For example, we will use the Layout structure on each page. It will contain Header, page content, and Footer. What changes on each page will be the page content. Like Layout, they will be found in Layout as Footer and Header components. If this is not the case, we will write code blocks such as Footer Header for each page. When a small change is needed, we have to go into each page and make the changes one by one. This causes a lot of waste of time and causes a lot of mistakes. Below is the Layout component I created and its use on the Blog page.",
+      "title": ""
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "title": "",
+      "code": "import Head from 'next/head';\nimport { Footer } from './footer';\nimport { Header } from './header';\n \n \nexport const Layout = ({ children, title = 'Göker Zafer', menu, footer }) => {\n return (\n   <>\n     <Head>\n       <title>{title}</title>\n       <link rel=\"icon\" href=\"/favicon.ico\" />\n     </Head>\n     <div className=\"layout\">\n       <Header menu={menu} />\n       <div>{children}</div>\n       <Footer footer={footer} />\n     </div>\n   </>\n );\n};"
+    },
+    {
+      "template": "text-block",
+      "title": "",
+      "content": "We will put the page content in the \"layout\" component. With the React children structure, those in the layout will be displayed on the page. In this way, we will avoid writing a lot of code and confusion."
+    },
+    {
+      "template": "code-block",
+      "language": "javascript",
+      "title": "",
+      "code": "import { Layout } from '../components/layout';\nimport { Container } from '../components/container';\nimport { getPosts } from '../api/blog';\nimport BlogPostWithImage from '../components/blog-post-with-image';\n \nconst BlogPage = ({ page, menu, footer }) => {\n return (\n   <Layout title=\"Göker Blog\" footer={footer} menu={menu.menuItems}>\n     <Container small>\n       {page.list.map((post) => (\n         <BlogPostWithImage\n           key={post.content.id}\n           blog={post.content}\n           path={post.path}\n         />\n       ))}\n     </Container>\n   </Layout>\n );\n};"
+    },
+    {
+      "template": "text-block",
+      "content": "We can use React components wherever we want as much as we want. When we need to make changes, we only make changes to one file. Isn't it great?",
+      "title": ""
+    }
+  ]
+}

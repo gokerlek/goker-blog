@@ -1,0 +1,18 @@
+{
+  "technologies": [
+    "react",
+    "TypeScript ",
+    "TailwindCSS",
+    "SounFontPlayer",
+    "forestry.io",
+    "styled jsx"
+  ],
+  "thumbnail": "/images/main.jpg",
+  "title": "Music Education App",
+  "summary": "This is music teaching app for music teachers",
+  "projectLink": "https://gizemgonca.vercel.app/",
+  "description": "It is an application that I have developed to facilitate online music education. It is an actively used software where my wife enters the course content and has audio questions for ear training.",
+  "galery": [
+
+  ]
+}

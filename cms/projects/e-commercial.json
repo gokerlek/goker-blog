@@ -1,0 +1,17 @@
+{
+  "technologies": [
+    "React JS",
+    "TypeScript",
+    "Redux",
+    "Tailwind CSS",
+    "Vercel"
+  ],
+  "thumbnail": "/images/screen-shot-2021-09-11-at-18-25-59.png",
+  "title": "E-Commercial",
+  "summary": "React JS, TypeScript, Redux, Tailwind CSS, Vercel",
+  "projectLink": "https://goker-shop.vercel.app/",
+  "description": "My goal in this project was to learn the business models of e-commerce sites. For this reason, I developed a deep understanding of e-commerce business areas by developing the minimum essential features of e-commerce sites.",
+  "galery": [
+
+  ]
+}

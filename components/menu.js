@@ -13,6 +13,7 @@ export const Menu = ({ menu }) => {
       <div className="menu">
         {menu.map((menuItem) => (
           <div
+            key={menuItem.id}
             className={
               router.asPath === menuItem.link ? 'menu-item-active' : 'menu-item'
             }>
