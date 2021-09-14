@@ -11,7 +11,12 @@ const ProjectsPage = ({ page, menu, footer }) => {
           <ul className="flex-container">
             {page.list.map((data) => (
               <li className="flex-item">
-                <ProjectContent key={data.id} projects={data.content} />
+                <a
+                  href={data.content.projectLink}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <ProjectContent key={data.id} projects={data.content} />
+                </a>
               </li>
             ))}
           </ul>
@@ -45,7 +50,6 @@ const ProjectsPage = ({ page, menu, footer }) => {
         `}
       </style>
     </>
-
   );
 };
 
