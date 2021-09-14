@@ -45,6 +45,7 @@ const ProjectsPage = ({ page, menu, footer }) => {
         `}
       </style>
     </>
+
   );
 };
 

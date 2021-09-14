@@ -13,6 +13,7 @@ export const ProjectContent = ({
         {description ? <RichText small>{description}</RichText> : null}
         <div className="label-container">
           {technologies.map((technology) => (
+
             <Label key={technology}>{technology}</Label>
           ))}
         </div>

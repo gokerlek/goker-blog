@@ -18,6 +18,7 @@ const BlogPage = ({ page, menu, footer }) => {
               path={post.path}
             />
           ))}
+
       </Container>
     </Layout>
   );
