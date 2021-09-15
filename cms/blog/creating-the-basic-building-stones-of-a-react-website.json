@@ -1,6 +1,6 @@
 {
   "title": "Creating The Basic Building Stones Of A React Website",
-  "publish_date": "2021-03-08T21:00:00Z",
+  "publish_date": "2021-03-05T21:00:00Z",
   "banner": "/images/joshua-aragon-eab4ml7c7fe-unsplash-1.jpg",
   "summary": "We are starting to shape the project with React. First, I examined the files that came with the React installation. I cleared the App.css and App.js contents. I wrote the following codes to lay the foundations of the project in App.js",
   "blocks": [
