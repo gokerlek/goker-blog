@@ -9,9 +9,9 @@
   "thumbnail": "/images/goker-blog.png",
   "title": "Göker Blog",
   "summary": "This blog itself 🥳",
-  "projectLink": "/",
+  "projectLink": "https://goker-blog.vercel.app/",
   "galery": [
 
   ],
-  "description": "This is a learning project and my aim is to improve my skills and creating content about my learnings so I can help others.\n\nCheers \uD83D\uDE09"
+  "description": "This is a learning project and my aim is to improve my skills and creating content about my learnings so I can help others.\n\nCheers 😉"
 }
